@@ -1,0 +1,539 @@
+\documentclass[amsmath, preprintnumbers, 10pt, twocolumn, prl, bibliograpy]{revtex4-1}
+%\documentclass[amsmath, preprint, 12pt, onecolumn, prl,longbibliograpy]{revtex4-1}
+
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{color}
+\newcommand{\MW}{\mathbf W}
+\newcommand{\MA}{\mathbf A}
+\newcommand{\MB}{\mathbf B}
+\newcommand{\MX}{\mathbf X}
+\newcommand{\aff}{\mathcal A}
+\newcommand{\R}{\mathcal R}
+\newcommand{\vP}{\mathbf P}
+\renewcommand{\Re}{{\mathrm Re}}
+\renewcommand{\Im}{{\mathrm Im}}
+\usepackage{physics}
+
+%3750 words max for prl
+%includes: Any text in the body of the article, Any text in a figure caption or table caption, Any text in a footnote or an endnote, 16 words per row for single-column equations, roughly 170 words for each square, 1-col figure.
+%excludes: Title, Author and affiliation listing, Abstract, Receipt date, published date, and other publication history, PACS or Keywords and DOI, References, Author byline footnotes, Acknowledgments
+
+%Word count:
+% 5 single-column equations (4 but one of them is tall) = 80 words
+% Figure 1, aspect ratio ~ 0.65 ~  110 words
+% Figure 2, aspect ratio ~ 0.6 ~ 102 words
+% Figure 3, aspect ratio ~0.6 ~ 102 words
+%---------------------------
+% Subtotal = 394
+%  + Other words = 3197
+%-----------------------------
+%Total: 
+
+\begin{document}
+\title{High chemical affinity increases the robustness of biochemical oscillations} %to rate fluctuations?
+\author{Clara \surname{del Junco} and Suriyanarayanan Vaikuntanathan}
+\affiliation{Department of Chemistry and The James Franck Institute, University of Chicago, Chicago, IL, 60637}
+\begin{abstract}
+
+Biochemical oscillations are ubiquitous in nature and allow organisms to properly time their biological functions. In this paper, we consider minimal Markov state models of nonequilibrium biochemical networks that support oscillations. We obtain analytical expressions for the coherence and period of oscillations in these networks. These quantities are expected to depend on all details of the transition rates in the Markov state model. However, our analytical calculations reveal that driving the system out of equilibrium makes many of these details - specifically, the location and arrangement of the transition rates - irrelevant to the coherence and period of oscillations. This theoretical prediction is confirmed by excellent agreement with numerical results.  As a consequence, the coherence and period of oscillations can be robustly maintained in the presence of fluctuations in the irrelevant variables. While recent work has established that increasing energy consumption improves the coherence of oscillations, our findings suggest that it plays the additional role of making the coherence and the average period of oscillations robust to fluctuations in rates that can result from the noisy environment of the cell.
+
+
+\end{abstract}
+
+\maketitle 
+
+
+
+Many organisms possess circadian rhythms, internal clocks implemented as a series of chemical reactions that result in periodic oscillations in the concentrations of certain biomolecules over the course of a day~\cite{Johnson2017, Panda2002}. These oscillations allow organisms to time their biological functions in synchrony with changes in daylight, thereby increasing the fitness of the organism~\cite{Novak2008, Woelfle2004, Johnson2017}. Yet, each chemical reaction underlying a biochemical oscillator is a stochastic process, which leads to fluctuations in the period of oscillations and affects how accurately it can tell time. In addition to this intrinsic noise, the heterogeneous environment inside a cell can increase the uncertainty in the clock's period~\cite{Pittayakanchit2018}. Understanding how biological organisms can robustly maintain the time scales of their clocks in the presence of these fluctuations is hence a central question~\cite{Barkai2000, Barato2017, Barato2015, Gingrich2016, Morelli2007}, which we address in this letter.  Our main result shows that nonequilibrium driving can dramatically reduce the number of parameters that control oscillator time scales. Oscillator time scales thus become insensitive to changes in many parameters, making them robust and tunable even when the reaction rates underlying the oscillator contain significant heterogeneity and are not irreversible.
+
+The model we use to derive our results (Fig.~\ref{fig:network}) is motivated by the fact that in a general sense oscillators undergo (noisy) limit cycles. The model consists of $N$ states connected in a ring that represents a projection of an oscillator's average limit cycle. For instance, in the well-studied KaiABC oscillator of the cyanobacteria {\it S. elongatus}, each of these states would represent a vector of counts of the different phosphorylation states of a population of KaiC proteins~\cite{Nakajima2005,Rust2007, VanZon2007, Marsland2019}. The system can hop between states with rates $k_i^{\pm}$, which could represent (de)phosphorylation rates. The source of oscillations is that the forward reaction rates in the KaiABC cycle are larger than the reverse rates. The rates in our model reproduce this asymmetry, creating a nonequilibrium steady state with a net clockwise current~\cite{Seifert2012}. The chemical driving force responsible for the current can be quantified by the ``affinity" of the network, $\aff \equiv \log \prod_{i=1}^N k_i^+/k_i^-$~\cite{Seifert2012}. In the case of KaiC, which is an ATPase, the affinity is provided by the highly exergonic hydrolysis of ATP~\cite{Terauchi2007}.  If the system is initialized on a state $i_{\rm 0}$ in a network with a non-zero affinity, the probability associated with finding the system in any state will exhibit damped oscillations. The period of the oscillations reflects the average time taken by the system to traverse the ring and return to the state $i_0$. The damping in the oscillations is an unavoidable consequence of the stochastic nature of the transitions. The ratio $\R$ of the damping time to the oscillation time provides a figure of merit for the coherence of oscillations in the network~\cite{Qian2000b, Cao2015, Morelli2007,Cao2015, Nguyen2018}. 
+
+\begin{figure}
+\centering
+\includegraphics[width=0.9\linewidth]{fig1.pdf}
+ \caption{The model for a biochemical oscillator studied in this paper. (a) Biochemical oscillators trace a limit cycle in a high-dimensional state space of chemical concentrations. In this example of the KaiC oscillator, reprinted from Ref.~\citenum{Leypunskiy2017}, the axes represent the fraction of KaiC phosphorylated at each of two sites. (b) We approximate these limit cycles by projecting them down on to a single cycle of states. (c) Each node represents a state of the system. The system hops between states with rates $k_i^\pm$ and is driven out of equilibrium by an affinity $\aff$. This creates a net clockwise current, resulting in damped oscillations in the probability of finding the system in a particular state. We probe the dependence of the oscillation time scales on the rates of the network by adding `defect rates' $h_j^\pm$ to the uniform network, for which the time scales are known, and obtaining expressions for the coherence and period of oscillations in the disordered network. Our theory works in disordered networks where no two rates are equal.}
+\label{fig:network}
+\end{figure}
+
+In principle, $\R$ depends on all the details of the rates $k_i^\pm$ in the network. However, in line with a large body of work that generically connects energy dissipation to accuracy in biophysical processes~\cite{Hopfield1974, Bennett1979, Qian2006, Lan2012, Mehta2012, Murugan2012}, it has been suggested that irrespective of these details the affinity bounds the coherence of biochemical oscillations~\cite{Cao2015, Barato2017, Wierenga2018, Nguyen2018}. 
+In particular, Barato and Seifert recently conjectured an upper bound on $\R$ as a function of the number of states $N$ and the affinity $\mathcal A$ of the biochemical network~\cite{Barato2017}. The bound is saturated when the network is uniform; that is, when all of the counterclockwise (CCW) rates in the network are equal and all of the clockwise (CW) rates are equal.  However, the bound is a weak constraint for non-uniform networks with arbitrary rates~\cite{Barato2017, Cao2015} and hence it is unclear which variables control the time scales of the oscillator in the presence of rate fluctuations. If the time scales depend sensitively on all of the rates in the network, then the time scales will vary dramatically with any fluctuations in the rates. Conversely, if they depend on only a small subset of the variables, then they will be robust to any fluctuations that do not affect this subset.
+We probe this question by obtaining analytical expressions for the time scales of Markov state models with non-uniform rates. 
+Our main result is an analytical expression for an eigenvalue of the transition rate matrices of these models, which gives the period $T$ and number of coherent oscillations $\R$.  In general these quantities depend on the magnitudes and locations of the all of the entries in the transition rate matrix, our result depends only on the single-site distribution of the rates. While the result is formally exact in the limit that the $\exp(-\aff/N) \to 0$, in practice we find that it works for surprisingly low values of the affinity.   
+%Our theory thus predicts that $\R$ and $T$ are {\it predictable} using only the statistics of rate magnitudes and {\it robust} to any changes in the locations of the rates and any correlations between them.  Numerical results confirm that with values of the affinity well within what is typically provided by ATP hydrolysis, our prediction is accurate even for networks where all of the rates take on random values that range over more than an order of magnitude. 
+%Numerical results confirm our prediction that the period and coherence of oscillations are controlled by a small set of parameters due to the presence of strongly nonequilibrium driving forces. Thus, high affinity significantly decreases the variance of $\R$ and $T$ over an ensemble of realizations of the rate disorder. 
+
+From a technical perspective, our results allow us to analytically compute values of the coherence and period in disordered regimes where $\R$ is significantly smaller than the upper bound.  From a biological perspective, our results suggest that as well as minimizing inherent fluctuations due to the stochasticity of the underlying processes~\cite{Cao2015, Barato2017, Barato2015, Gingrich2016}, a large energy budget has the additional, as-yet-unexplored advantage of reducing uncertainty in the presence of the additional level of disorder in reaction rates.
+
+{\bf Analytical expressions for $\R$ and $T$ in disordered networks.} As in Ref.~\citenum{Barato2017}, we compute $\R$ from the ratio of the imaginary to real parts of the first non-zero eigenvalue ($\phi$) of the transition rate matrix associated with the Markov state network. We approximate the period of oscillations by $T \approx 2\pi/|\Im[\phi]|$ and the correlation time by $\tau \approx -1/\Re[\phi]$, and $\R = |\Im[\phi]|/-\Re[\phi]$. Formally, $T$ and $\tau$ depend on all the eigenvalues of the transition rate matrix, but in the Supplementary Material (SM)~\cite{Supplemental}, we show that $\phi$ captures the important features of $T$ and $\tau$. 
+
+Ref.~\citenum{Barato2017} states that for a fixed affinity $\aff$ and number of states $N$, $\R$ is bounded by
+\begin{equation}
+\mathcal R \leq \cot(\pi/N)\tanh[\mathcal A/(2N)] \equiv \R_0
+\label{eq:bound}
+\end{equation}
+and that the bound is saturated in a uniform network, that is, when $k_i^+ = k^+ = \exp(\aff/N)k^-$ and $k_i^- = k^-$ for all $i$. The transition rate matrix $\MW^{(0)}$ for the uniform network is given by 
+\begin{equation}
+\MW^{(0)}_{ji} = k^+\delta_{i, j-1} + k^- \delta_{i, j+1} - (k^- +k^+)\delta_{i,j}.
+\end{equation}
+$\MW^{(0)}$ is a circulant matrix whose $i$th row is the top row shifted to the right by $i$ columns~\cite{Aldrovandi2001}. Its eigenvalues are the discrete Fourier transform of the first row, giving $\phi^{(0)} = -(k^+ + k^-) + k^+ e^{-2\pi i /N} + k^- e^{2\pi i /N}$ from which $\R_0$ is immediately recovered. We begin from this known result in order to find how the addition of disorder changes $\phi$. We perturb the uniform network by adding some number $m \leq N-1$ of ``defect rates" denoted $h_j^\pm$  as illustrated in Fig.~\ref{fig:network}; these could be due to some inherent asymmetry in the network (i.e. not all of the reactions making up the cycle are the same), and/or to local fluctuations in variables such as concentration that affect reaction rates. 
+
+Rather than directly perturbing $\MW^{(0)}$, which would restrict the defect rates to be close to the uniform rates, we recast the eigenvalue problem in terms of transfer matrices~\cite{Vaikuntanathan2014a}. The transfer matrix formulation is useful for studying properties of systems with high degrees of translational symmetry and rapidly decaying spatial interactions and has been used to study localization in tight binding models~\cite{Crisanti1993} and neural networks~\cite{Amir2016}, as well as dynamic~\cite{Vaikuntanathan2014a} and structural phase transitions~\cite{Onsager1944}. 
+
+A detailed derivation is provided in SM section II~\cite{Supplemental}. The essential insight that it provides is as follows: whereas in general the new eigenvalue $\phi$, and therefore $\R$ and $T$, depend on all the details of the perturbed transition rate matrix, when the value of $\exp(-\aff/m)$ is large, significant simplifications are possible which lead to the following expression that depends only on the {\it values} of the defect rates and not their {\it relative locations}:
+\begin{align}
+\phi &= \phi^{(0)} + \gamma \label{eq:phinew} \\
+\gamma &= \frac{1}{m-N}\left(\sum_{j=1}^m \log\zeta_j'(\gamma)\right) + \frac{1}{2(m-N)^2}\left(\sum_{j=1}^m \log\zeta_j'(\gamma)\right)^2 \label{eq:gamma} .
+\end{align}
+An expression for $\zeta_j'(\gamma)$ is given in SM Eqs.~37 and 40 - it is a function only of $\gamma$, $h_j^\pm$, and $k^\pm$, and is independent of the rates at any other site. Eq.~\ref{eq:gamma} is a nonlinear equation for $\gamma$ which must be solved self-consistently. In SM Eqs.~45 and 54, we provide a linear expansion. Our theoretical predictions in this paper are obtained numerically by searching for solutions to Eq.~\ref{eq:gamma} near to the linear answer. %Eq.~\ref{eq:gamma} shows how the number of parameters that control the coherence and oscillation timescales decreases dramatically due to high chemical affinity. 
+
+While this result is only exact in the limit of high affinity, in practice, as we show in Figs.~\ref{fig:rtvsm} and~\ref{fig:rtvssigma}, it works well even for rather small values of $\aff$. Specifically, $N/\aff$ sets a length scale for correlations between defect rates, so that if $N/\aff \ll 1$ the relative positions of defect rates do not affect $\phi$. Generally, $\phi$ depends on $\mathcal O (N)$ parameters, including the values and locations of the uniform and defect rates in the model.  Eqs.~\ref{eq:phinew} - \ref{eq:gamma} predict that in the limit $N/\aff \ll 1$, $\phi$ depends only on the values of the rates. %only a small, fixed number of parameters that does not scale with system size, namely, enough to specify the single-site probability distribution of the rates. 
+As such, changes in the remaining, irrelevant parameters will not affect oscillator timescales - in other words, the oscillator is robust to these changes.
+As we demonstrate below, this implies that the period and coherence of oscillations can be maintained even in the presence of disorder in the rates. 
+
+{\bf Accurate theoretical predictions of coherence and period of oscillations with strong nonequilibrium driving.} To test the limits of Eq.~\ref{eq:phinew}, we compared it to the result of numerical diagonalization for networks of size $N = 100$ with up to 99 defect rates placed at random locations in the network. We considered networks with quenched disorder: we set all CCW rates to $k^- = h_j^- = 1$ and randomly selected the CW defect rates $h_j^+$ from a Gaussian probability distribution $P_G(\tilde\sigma,\aff_0, N)$ with mean $k^+ = \exp(\aff_0/N)$ and standard deviation $\sigma = \tilde \sigma \exp(\aff_0/N)$, and with a lower cutoff at 0.1 so that we do not select rates that are very close to zero or negative. This prescription naturally allows the affinity to vary between networks - we show results for networks with fixed affinity in Fig.~3 of the SM~\cite{Supplemental} that confirm the bound in Eq.~\ref{eq:bound}. Fig.~\ref{fig:rtvsm} shows the importance of a high affinity ($\aff_0/N$, the value of the affinity in the uniform network) for controlling $\R$ and $T$.  Our prediction from Eq.~\ref{eq:phinew} improves with increasing $\aff_0/N$: for $\aff_0/N = 2$, Fig.~\ref{fig:rtvsm} shows that Eq.~\ref{eq:gamma} is accurate even when all but one of the rates in the network are random and $\langle\R\rangle$ is 40\% less than the bound $\R_0$. 
+(For comparison, the cycle of the KaiC hexamer has $\aff/N \gtrsim 10$~\cite{Rust2007, Terauchi2007, cellbionumbers}.) 
+
+ While minimizing phase diffusion and thereby maximizing $\R$ is a priority for a biochemical clock to keep time accurately, it is additionally important that $T$, the period of oscillations, be robust and tunable, for example in order to match with an external signal~\cite{Woelfle2004}. Our theory (Eq.~\ref{eq:gamma}) shows that $T$ can be reliably controlled in the high affinity limit even in the presence of substantial disorder, and we also find that the spread of $T$ values decreases significantly with increasing affinity. %The excellent agreement of numerical results with our theoretical expression reveals a role for nonequilibrium driving that has, to the best of our knowledge, not been previously articulated: in addition to suppressing the uncertainty in the period due to the inherent stochasticity of the processes underlying oscillations, it also makes the oscillator timescales more robust by decoupling the rates of these processes.
+ 
+
+{\bf The coherence and period of oscillations are robust to biologically relevant rate fluctuations.} The ``number of defect rates" is a convenient measure of disorder to use in the context of our theory, but is not clearly related to a biological scenario; in general we would expect all rates to fluctuate, for instance due to local fluctuations in the concentration of ATP, and that the disorder would be quantified by the size of the fluctuations. In Fig.~\ref{fig:rtvsm} we showed that our perturbation theory can handle networks where effectively all of the rates fluctuate. In Fig.~\ref{fig:rtvssigma}, we further investigate these fully disordered networks by showing how $\R$ and $T$ vary as a function of the spread of rates $\sigma$ in a network with all CCW rates set to 1 and all CW rates drawn from the distribution $P_G(\tilde\sigma,\aff_0, N)$ (defined in the previous section). All of our findings still hold: the prediction becomes more accurate (Fig.~\ref{fig:rtvssigma}a, b) and the spread of $T$ and $\R$ values decrease (Fig.~\ref{fig:rtvssigma}d) as the affinity $\aff_0$ increases. In these networks the affinity naturally varies, and the average time scales are robust to these small variations.
+
+Finally, we consider changes in the uniform rate, or $\aff_0/N$. The bound in Eq.~\ref{eq:bound} implies that in a uniform network, the coherence $\R$ becomes insensitive to changes in the affinity at high $\aff_0/N$ (Fig.~\ref{fig:rtvssigma}c). However, it is not clear whether this will be the case in a disordered network. In Fig.~\ref{fig:rtvssigma}, we show that even in a disordered network where $\R < \R_0$, the dependence of $\R$ on $\aff_0/N$ vanishes smoothly for values of $\aff_0/N$ greater than  $\sim 5$. In this regime, our analytical results demonstrate how - due to nonequilibrium driving - the coherence is insensitive to large global fluctuations in the affinity that change the average rate $k^+$ as well as to small local fluctuations that cause the rates to fluctuate about $k^+$.
+
+\begin{figure}
+\centering
+\includegraphics[width = \linewidth]{fig2.pdf}
+\caption{Coherence $\R$ and period $T$ of an oscillator as a function of the percent of defect rates. The values of $\R$/$T$ become more robust (spread of values decreases) and predictable at high affinity. Results are for networks with $N = 100$ states. All CCW rates are set to 1. CW defect rates $h_j^+$ are drawn from a Gaussian distribution with mean $k^+ =  \exp(\aff_0/N)$ and standard deviation $0.4k^+$. 
+Because the distributions of $\R$ and $T$ are asymmetric, we plot the median (solid line) $\pm$ one quartile (shaded region) of the numerical values for 500 samples of defect rates. The dashed lines are the median theoretical predictions for 500 samples of defect rates. For $\aff_0/N = 2$ (blue), our theory is accurate even when \% defects $\approx 100$. On the right, we compare the values of $\R/\R_0$ and $T_0/T$ for individual realizations of the random networks with 50\% defects (parameters indicated by a star).}
+\label{fig:rtvsm}
+\end{figure}
+ 
+\begin{figure}
+\centering
+\includegraphics[width = \linewidth]{fig3.pdf}
+\caption{(a) $\R$ and (b) $T$ for totally disordered networks of size $N = 100$ as a function of the standard deviation of the distribution of defect rates. All CCW rates are set to 1. CW defect rates $h_j^+$ are drawn from a Gaussian distribution with mean $k^+ =  \exp(\aff_0/N)$ and standard deviation $\sigma = \tilde\sigma k^+$.  Black dashed lines are theoretical predictions. In the insets, we compare the values of $\R/\R_0$ and $T_0/T$ for individual realizations of the random networks with parameters indicated by a star. (c) The absolute value of $\R$ as a function of $\aff_0/N$ plateaus in a totally disordered network (here we show results for $\tilde\sigma = 0.3$) as well as in uniform networks (given by the bound in Eq.~\ref{eq:bound}). As a result, $d\R/d(\aff_0/N)$ goes smoothly to zero with the same rate in the disordered and uniform networks, even though $\R$ is far from the bound. 
+(d) The `spread', defined as the distance between the median $\pm$ 1 quartile of the data, as a function of the affinity. As predicted, it decreases with increasing affinity.}
+\label{fig:rtvssigma}
+\end{figure}
+
+{\bf Discussion and Conclusions.} Biochemical oscillators, which can function as internal clocks, operate in noisy environments that can affect the ability of the clock to tell time accurately; yet somehow these oscillations continue with a well-defined period over long times. Here, we present analytical calculations supported by numerical results that show how a biochemical oscillator modeled as a Markov jump process on a ring of states (Fig.~\ref{fig:network}) can use high chemical affinity (for instance, in the form of ATP) to robustly maintain and tune its time scales even in the presence of a substantial amount of disorder. While previous work~\cite{Barato2017} has postulated an upper bound on the number of coherent oscillations that such a model can support in terms of the chemical affinity, the bound can be loose, and does not elucidate the dependence on the details of the rates in the network~\cite{Barato2017}.  We close this gap by showing how affinity can dramatically decrease the number of relevant variables controlling the coherence and period of oscillations. 
+
+Specifically, we consider Markov state networks such as those in Fig.~\ref{fig:network}c and sample the rates from a probability distribution in order to mimic disorder in biological systems. We consider networks with quenched disorder in order to probe the synchronization between multiple noninteracting oscillators (e.g. in different cells~\cite{Mihalcescu2004}), and as a proxy for the variation in a single oscillator's period when the rates are fluctuating over time.  Our analytical theory in Eqs.~\ref{eq:phinew} - \ref{eq:gamma} reveals that in the limit of high affinity the arrangement of the rates becomes irrelevant, and the period of oscillations $T$  and the number of coherent oscillations $\R$ depend only on the magnitude of the rates. As a result, in the limit of high affinity, we can accurately predict $\R$ and $T$ for individual realizations of the rate disorder knowing only the values of the rates. Moreover, for a given probability distribution of the rates, the possible values of $\R$ and $T$ for different realizations of the rates are more narrowly distributed about their average values because different arrangements of the rates no longer affect the time scales. Taken together, this means that when the affinity is high $\R$ and $T$ can be well-approximated from a small, fixed number of parameters that does not scale with system size - namely, enough to specify the single-site probability distribution of the rates - as opposed to $\mathcal O(N)$ parameters required to specify the values and locations of all the rates in a low-affinity oscillator. While we considered 
+
+Our results give insight in to why biochemical oscillators might evolve to consume large amounts of energy in the form of ATP~\cite{Terauchi2007}: in addition to the previously known function of suppressing uncertainty in the period of the oscillator for a system with uniform rates~\cite{Cao2015, Barato2017}, it also makes the time scales of the oscillator more robust to fluctuations in the rates caused by the noisy environment of the cell by decoupling these rates.
+
+Although we used the example of KaiABC in this work, the Markov cycle representation is not limited to post-translational oscillators with conserved protein copy numbers and the more common transcription-translation oscillators can also be studied in this paradigm. On the other hand, the generality of our results is limited by restricting ourselves to a single cycle of states, representing the average path of a limit-cycle oscillator in a high-dimensional state space. %We anticipate that our results can be extended to situations where the oscillator is allowed to fluctuate off of this average path. %In Ref.~\cite{Barato2017}, the authors argue that in a multicyclic network one cycle will dominate and that the bound on global oscillations will be limited by the affinity and number of states of the dominant cycle. Similarly, 
+If the oscillator has a dominant cycle and multiple secondary cycles, we show elsewhere~\cite{DelJunco2019b} that our results can be applied by coarse-graining the secondary cycles to obtain effective rates and then using our expression in Eq.~\ref{eq:phinew} for the main cycle. %This extension will be explored in forthcoming work.  
+Our theory is thus applicable to a class of networks with disordered rates and potentially many cycles which we claim are simplified but relevant caricatures of biochemical oscillators. The implications for the robustness of oscillator timescales are therefore not limited only to this single-cycle model but may be a general feature of more detailed models of biochemical oscillators.
+
+\section{Acknowledgements}
+\begin{acknowledgments}
+
+We thank Robert Jack and Kabir Husain for helpful comments on an earlier version of this manuscript. CdJ acknowledges the support of the Natural Sciences and Engineering Research Council of Canada (NSERC). CdJ a \'et\'e financ\'ee par le Conseil de recherches en sciences naturelles et en g\'enie du Canada (CRSNG). This work was partially supported by the University of Chicago Materials Research Science and Engineering Center (MRSEC), which is funded by the National Science Foundation under award number DMR-1420709.  SV also acknowledges support from the Sloan Fellowship and the University of Chicago.
+
+\end{acknowledgments}
+
+%\bibliography{/Users/claradeljuncooffice/Dropbox/Papers/my-library.bib}
+
+%merlin.mbs apsrev4-1.bst 2010-07-25 4.21a (PWD, AO, DPC) hacked
+%Control: key (0)
+%Control: author (8) initials jnrlst
+%Control: editor formatted (1) identically to author
+%Control: production of article title (-1) disabled
+%Control: page (0) single
+%Control: year (1) truncated
+%Control: production of eprint (0) enabled
+\begin{thebibliography}{32}%
+\makeatletter
+\providecommand \@ifxundefined [1]{%
+ \@ifx{#1\undefined}
+}%
+\providecommand \@ifnum [1]{%
+ \ifnum #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \@ifx [1]{%
+ \ifx #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \natexlab [1]{#1}%
+\providecommand \enquote  [1]{``#1''}%
+\providecommand \bibnamefont  [1]{#1}%
+\providecommand \bibfnamefont [1]{#1}%
+\providecommand \citenamefont [1]{#1}%
+\providecommand \href@noop [0]{\@secondoftwo}%
+\providecommand \href [0]{\begingroup \@sanitize@url \@href}%
+\providecommand \@href[1]{\@@startlink{#1}\@@href}%
+\providecommand \@@href[1]{\endgroup#1\@@endlink}%
+\providecommand \@sanitize@url [0]{\catcode `\\12\catcode `\$12\catcode
+  `\&12\catcode `\#12\catcode `\^12\catcode `\_12\catcode `\%12\relax}%
+\providecommand \@@startlink[1]{}%
+\providecommand \@@endlink[0]{}%
+\providecommand \url  [0]{\begingroup\@sanitize@url \@url }%
+\providecommand \@url [1]{\endgroup\@href {#1}{\urlprefix }}%
+\providecommand \urlprefix  [0]{URL }%
+\providecommand \Eprint [0]{\href }%
+\providecommand \doibase [0]{http://dx.doi.org/}%
+\providecommand \selectlanguage [0]{\@gobble}%
+\providecommand \bibinfo  [0]{\@secondoftwo}%
+\providecommand \bibfield  [0]{\@secondoftwo}%
+\providecommand \translation [1]{[#1]}%
+\providecommand \BibitemOpen [0]{}%
+\providecommand \bibitemStop [0]{}%
+\providecommand \bibitemNoStop [0]{.\EOS\space}%
+\providecommand \EOS [0]{\spacefactor3000\relax}%
+\providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
+\let\auto@bib@innerbib\@empty
+%</preamble>
+\bibitem [{\citenamefont {Johnson}\ \emph {et~al.}(2017)\citenamefont
+  {Johnson}, \citenamefont {Zhao}, \citenamefont {Xu},\ and\ \citenamefont
+  {Mori}}]{Johnson2017}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~H.}\ \bibnamefont
+  {Johnson}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Zhao}},
+  \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Xu}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {T.}~\bibnamefont {Mori}},\ }\href {\doibase
+  10.1038/nrmicro.2016.196} {\bibfield  {journal} {\bibinfo  {journal} {Nat.
+  Rev. Microbiol.}\ }\textbf {\bibinfo {volume} {15}},\ \bibinfo {pages} {232}
+  (\bibinfo {year} {2017})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Panda}\ \emph {et~al.}(2002)\citenamefont {Panda},
+  \citenamefont {Hogenesch},\ and\ \citenamefont {Kay}}]{Panda2002}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Panda}}, \bibinfo {author} {\bibfnamefont {J.~B.}\ \bibnamefont
+  {Hogenesch}}, \ and\ \bibinfo {author} {\bibfnamefont {S.~A.}\ \bibnamefont
+  {Kay}},\ }\href {\doibase 10.1038/417329a} {\bibfield  {journal} {\bibinfo
+  {journal} {Nature}\ }\textbf {\bibinfo {volume} {417}},\ \bibinfo {pages}
+  {329} (\bibinfo {year} {2002})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Nov{\'{a}}k}\ and\ \citenamefont
+  {Tyson}(2008)}]{Novak2008}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
+  {Nov{\'{a}}k}}\ and\ \bibinfo {author} {\bibfnamefont {J.~J.}\ \bibnamefont
+  {Tyson}},\ }\href {\doibase 10.1038/nrm2530} {\bibfield  {journal} {\bibinfo
+  {journal} {Nat. Rev. Mol. Cell Biol.}\ }\textbf {\bibinfo {volume} {9}},\
+  \bibinfo {pages} {981} (\bibinfo {year} {2008})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Woelfle}\ \emph {et~al.}(2004)\citenamefont
+  {Woelfle}, \citenamefont {Ouyang}, \citenamefont {Phanvijhitsiri},\ and\
+  \citenamefont {Johnson}}]{Woelfle2004}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~A.}\ \bibnamefont
+  {Woelfle}}, \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Ouyang}},
+  \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Phanvijhitsiri}}, \ and\
+  \bibinfo {author} {\bibfnamefont {C.~H.}\ \bibnamefont {Johnson}},\ }\href
+  {\doibase 10.1016/J.CUB.2004.08.023} {\bibfield  {journal} {\bibinfo
+  {journal} {Curr. Biol.}\ }\textbf {\bibinfo {volume} {14}},\ \bibinfo {pages}
+  {1481} (\bibinfo {year} {2004})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Pittayakanchit}\ \emph {et~al.}(2018)\citenamefont
+  {Pittayakanchit}, \citenamefont {Lu}, \citenamefont {Chew}, \citenamefont
+  {Rust},\ and\ \citenamefont {Murugan}}]{Pittayakanchit2018}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.}~\bibnamefont
+  {Pittayakanchit}}, \bibinfo {author} {\bibfnamefont {Z.}~\bibnamefont {Lu}},
+  \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Chew}}, \bibinfo {author}
+  {\bibfnamefont {M.~J.}\ \bibnamefont {Rust}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {A.}~\bibnamefont {Murugan}},\ }\href {\doibase
+  10.7554/eLife.37624} {\bibfield  {journal} {\bibinfo  {journal} {Elife}\
+  }\textbf {\bibinfo {volume} {7}} (\bibinfo {year} {2018}),\
+  10.7554/eLife.37624}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Barkai}\ and\ \citenamefont
+  {Leibler}(2000)}]{Barkai2000}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Barkai}}\ and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Leibler}},\ }\href {\doibase 10.1038/35002258} {\bibfield  {journal}
+  {\bibinfo  {journal} {Nature}\ }\textbf {\bibinfo {volume} {403}},\ \bibinfo
+  {pages} {267} (\bibinfo {year} {2000})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Barato}\ and\ \citenamefont
+  {Seifert}(2017)}]{Barato2017}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~C.}\ \bibnamefont
+  {Barato}}\ and\ \bibinfo {author} {\bibfnamefont {U.}~\bibnamefont
+  {Seifert}},\ }\href {\doibase 10.1103/PhysRevE.95.062409} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. E}\ }\textbf {\bibinfo {volume}
+  {95}},\ \bibinfo {pages} {062409} (\bibinfo {year} {2017})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Barato}\ and\ \citenamefont
+  {Seifert}(2015)}]{Barato2015}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~C.}\ \bibnamefont
+  {Barato}}\ and\ \bibinfo {author} {\bibfnamefont {U.}~\bibnamefont
+  {Seifert}},\ }\href {\doibase 10.1103/PhysRevLett.114.158101} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo
+  {volume} {114}},\ \bibinfo {pages} {158101} (\bibinfo {year}
+  {2015})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gingrich}\ \emph {et~al.}(2016)\citenamefont
+  {Gingrich}, \citenamefont {Horowitz}, \citenamefont {Perunov},\ and\
+  \citenamefont {England}}]{Gingrich2016}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.~R.}\ \bibnamefont
+  {Gingrich}}, \bibinfo {author} {\bibfnamefont {J.~M.}\ \bibnamefont
+  {Horowitz}}, \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Perunov}}, \
+  and\ \bibinfo {author} {\bibfnamefont {J.~L.}\ \bibnamefont {England}},\
+  }\href {\doibase 10.1103/PhysRevLett.116.120601} {\bibfield  {journal}
+  {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {116}},\
+  \bibinfo {pages} {120601} (\bibinfo {year} {2016})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Morelli}\ and\ \citenamefont
+  {J{\"{u}}licher}(2007)}]{Morelli2007}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.~G.}\ \bibnamefont
+  {Morelli}}\ and\ \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
+  {J{\"{u}}licher}},\ }\href {\doibase 10.1103/PhysRevLett.98.228101}
+  {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf
+  {\bibinfo {volume} {98}},\ \bibinfo {pages} {228101} (\bibinfo {year}
+  {2007})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Nakajima}\ \emph {et~al.}(2005)\citenamefont
+  {Nakajima}, \citenamefont {Imai}, \citenamefont {Ito}, \citenamefont
+  {Nishiwaki}, \citenamefont {Murayama}, \citenamefont {Iwasaki}, \citenamefont
+  {Oyama},\ and\ \citenamefont {Kondo}}]{Nakajima2005}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Nakajima}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Imai}},
+  \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Ito}}, \bibinfo {author}
+  {\bibfnamefont {T.}~\bibnamefont {Nishiwaki}}, \bibinfo {author}
+  {\bibfnamefont {Y.}~\bibnamefont {Murayama}}, \bibinfo {author}
+  {\bibfnamefont {H.}~\bibnamefont {Iwasaki}}, \bibinfo {author} {\bibfnamefont
+  {T.}~\bibnamefont {Oyama}}, \ and\ \bibinfo {author} {\bibfnamefont
+  {T.}~\bibnamefont {Kondo}},\ }\href {\doibase 10.1126/science.1108451}
+  {\bibfield  {journal} {\bibinfo  {journal} {Science.}\ }\textbf
+  {\bibinfo {volume} {308}},\ \bibinfo {pages} {414} (\bibinfo {year}
+  {2005})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Rust}\ \emph {et~al.}(2007)\citenamefont {Rust},
+  \citenamefont {Markson}, \citenamefont {Lane}, \citenamefont {Fisher},\ and\
+  \citenamefont {O'Shea}}]{Rust2007}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~J.}\ \bibnamefont
+  {Rust}}, \bibinfo {author} {\bibfnamefont {J.~S.}\ \bibnamefont {Markson}},
+  \bibinfo {author} {\bibfnamefont {W.~S.}\ \bibnamefont {Lane}}, \bibinfo
+  {author} {\bibfnamefont {D.~S.}\ \bibnamefont {Fisher}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {E.~K.}\ \bibnamefont {O'Shea}},\ }\href {\doibase
+  10.1126/science.1148596} {\bibfield  {journal} {\bibinfo  {journal} {Science
+  .}\ }\textbf {\bibinfo {volume} {318}},\ \bibinfo {pages} {809}
+  (\bibinfo {year} {2007})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {van Zon}\ \emph {et~al.}(2007)\citenamefont {van
+  Zon}, \citenamefont {Lubensky}, \citenamefont {Altena},\ and\ \citenamefont
+  {ten Wolde}}]{VanZon2007}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~S.}\ \bibnamefont
+  {van Zon}}, \bibinfo {author} {\bibfnamefont {D.~K.}\ \bibnamefont
+  {Lubensky}}, \bibinfo {author} {\bibfnamefont {P.~R.~H.}\ \bibnamefont
+  {Altena}}, \ and\ \bibinfo {author} {\bibfnamefont {P.~R.}\ \bibnamefont {ten
+  Wolde}},\ }\href {\doibase 10.1073/pnas.0608665104} {\bibfield  {journal}
+  {\bibinfo  {journal} {Proc. Natl. Acad. Sci. U. S. A.}\ }\textbf {\bibinfo
+  {volume} {104}},\ \bibinfo {pages} {7420} (\bibinfo {year} {2007})} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Marsland}\ \emph {et~al.}(2019)\citenamefont
+  {Marsland}, \citenamefont {Cui},\ and\ \citenamefont
+  {Horowitz}}]{Marsland2019}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Marsland}}, \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {Cui}}, \
+  and\ \bibinfo {author} {\bibfnamefont {J.~M.}\ \bibnamefont {Horowitz}},\
+  }\href {\doibase 10.1098/rsif.2019.0098} {\bibfield  {journal} {\bibinfo
+  {journal} {J. R. Soc. Interface}\ }\textbf {\bibinfo {volume} {16}},\
+  \bibinfo {pages} {20190098} (\bibinfo {year} {2019})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Seifert}(2012)}]{Seifert2012}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {U.}~\bibnamefont
+  {Seifert}},\ }\href {\doibase 10.1088/0034-4885/75/12/126001} {\bibfield
+  {journal} {\bibinfo  {journal} {Rep. Prog. Phys.}\ }\textbf {\bibinfo
+  {volume} {75}},\ \bibinfo {pages} {126001} (\bibinfo {year}
+  {2012})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Terauchi}\ \emph {et~al.}(2007)\citenamefont
+  {Terauchi}, \citenamefont {Kitayama}, \citenamefont {Nishiwaki},
+  \citenamefont {Miwa}, \citenamefont {Murayama}, \citenamefont {Oyama},\ and\
+  \citenamefont {Kondo}}]{Terauchi2007}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Terauchi}}, \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Kitayama}},
+  \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Nishiwaki}}, \bibinfo
+  {author} {\bibfnamefont {K.}~\bibnamefont {Miwa}}, \bibinfo {author}
+  {\bibfnamefont {Y.}~\bibnamefont {Murayama}}, \bibinfo {author}
+  {\bibfnamefont {T.}~\bibnamefont {Oyama}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {T.}~\bibnamefont {Kondo}},\ }\href {\doibase 0706292104
+  [pii];10.1073/pnas.0706292104 [doi]} {\bibfield  {journal} {\bibinfo
+  {journal} {Proc. Natl. Acad. Sci. U. S. A.}\ }\textbf {\bibinfo {volume}
+  {104}},\ \bibinfo {pages} {16377} (\bibinfo {year} {2007})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Qian}\ and\ \citenamefont {Qian}(2000)}]{Qian2000b}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Qian}}\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Qian}},\
+  }\href {\doibase 10.1103/PhysRevLett.84.2271} {\bibfield  {journal} {\bibinfo
+   {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {84}},\ \bibinfo
+  {pages} {2271} (\bibinfo {year} {2000})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Cao}\ \emph {et~al.}(2015)\citenamefont {Cao},
+  \citenamefont {Wang}, \citenamefont {Ouyang},\ and\ \citenamefont
+  {Tu}}]{Cao2015}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
+  {Cao}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Wang}}, \bibinfo
+  {author} {\bibfnamefont {Q.}~\bibnamefont {Ouyang}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {Y.}~\bibnamefont {Tu}},\ }\href {\doibase 10.1038/nphys3412}
+  {\bibfield  {journal} {\bibinfo  {journal} {Nat. Phys.}\ }\textbf {\bibinfo
+  {volume} {11}},\ \bibinfo {pages} {772} (\bibinfo {year} {2015})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Nguyen}\ \emph {et~al.}(2018)\citenamefont {Nguyen},
+  \citenamefont {Seifert},\ and\ \citenamefont {Barato}}]{Nguyen2018}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
+  {Nguyen}}, \bibinfo {author} {\bibfnamefont {U.}~\bibnamefont {Seifert}}, \
+  and\ \bibinfo {author} {\bibfnamefont {A.~C.}\ \bibnamefont {Barato}},\
+  }\href {\doibase 10.1063/1.5032104} {\bibfield  {journal} {\bibinfo
+  {journal} {J. Chem. Phys.}\ }\textbf {\bibinfo {volume} {149}},\ \bibinfo
+  {pages} {045101} (\bibinfo {year} {2018})}\BibitemShut {NoStop}%
+ \bibitem [{\citenamefont {Leypunskiy}\ \emph {et~al.}(2017)\citenamefont
+  {Leypunskiy}, \citenamefont {Lin}, \citenamefont {Yoo}, \citenamefont {Lee},
+  \citenamefont {Dinner},\ and\ \citenamefont {Rust}}]{Leypunskiy2017}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Leypunskiy}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Lin}},
+  \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Yoo}}, \bibinfo {author}
+  {\bibfnamefont {U.}~\bibnamefont {Lee}}, \bibinfo {author} {\bibfnamefont
+  {A.~R.}\ \bibnamefont {Dinner}}, \ and\ \bibinfo {author} {\bibfnamefont
+  {M.~J.}\ \bibnamefont {Rust}},\ }\href {\doibase 10.7554/eLife.23539}
+  {\bibfield  {journal} {\bibinfo  {journal} {Elife}\ }\textbf {\bibinfo
+  {volume} {6}} (\bibinfo {year} {2017}),\ 10.7554/eLife.23539}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Hopfield}(1974)}]{Hopfield1974}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~J.}\ \bibnamefont
+  {Hopfield}},\ }\href
+  {https://www.ncbi.nlm.nih.gov/pmc/articles/PMC434344/pdf/pnas00073-0345.pdf}
+  {\bibfield  {journal} {\bibinfo  {journal} {Proc. Natl. Acad. Sci. U.S.A.}\ }\textbf
+  {\bibinfo {volume} {71}},\ \bibinfo {pages} {4135} (\bibinfo {year}
+  {1974})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Bennett}(1979)}]{Bennett1979}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~H.}\ \bibnamefont
+  {Bennett}},\ }\href {\doibase 10.1016/0303-2647(79)90003-0} {\bibfield
+  {journal} {\bibinfo  {journal} {Biosystems}\ }\textbf {\bibinfo {volume}
+  {11}},\ \bibinfo {pages} {85} (\bibinfo {year} {1979})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Qian}(2006)}]{Qian2006}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Qian}},\ }\href {\doibase 10.1016/J.JMB.2006.07.068} {\bibfield  {journal}
+  {\bibinfo  {journal} {J. Mol. Biol.}\ }\textbf {\bibinfo {volume} {362}},\
+  \bibinfo {pages} {387} (\bibinfo {year} {2006})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Lan}\ \emph {et~al.}(2012)\citenamefont {Lan},
+  \citenamefont {Sartori}, \citenamefont {Neumann}, \citenamefont {Sourjik},\
+  and\ \citenamefont {Tu}}]{Lan2012}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
+  {Lan}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Sartori}},
+  \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Neumann}}, \bibinfo
+  {author} {\bibfnamefont {V.}~\bibnamefont {Sourjik}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {Y.}~\bibnamefont {Tu}},\ }\href {\doibase
+  10.1038/nphys2276} {\bibfield  {journal} {\bibinfo  {journal} {Nat. Phys.}\
+  }\textbf {\bibinfo {volume} {8}},\ \bibinfo {pages} {422} (\bibinfo {year}
+  {2012})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Mehta}\ and\ \citenamefont
+  {Schwab}(2012)}]{Mehta2012}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Mehta}}\ and\ \bibinfo {author} {\bibfnamefont {D.~J.}\ \bibnamefont
+  {Schwab}},\ }\href {\doibase 10.1073/pnas.1207814109} {\bibfield  {journal}
+  {\bibinfo  {journal} {Proc. Natl. Acad. Sci. U. S. A.}\ }\textbf {\bibinfo
+  {volume} {109}},\ \bibinfo {pages} {17978} (\bibinfo {year}
+  {2012})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Murugan}\ \emph {et~al.}(2012)\citenamefont
+  {Murugan}, \citenamefont {Huse},\ and\ \citenamefont
+  {Leibler}}]{Murugan2012}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Murugan}}, \bibinfo {author} {\bibfnamefont {D.~A.}\ \bibnamefont {Huse}}, \
+  and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Leibler}},\ }\href
+  {\doibase 10.1073/pnas.1119911109} {\bibfield  {journal} {\bibinfo  {journal}
+  {Proc. Natl. Acad. Sci. U. S. A.}\ }\textbf {\bibinfo {volume} {109}},\
+  \bibinfo {pages} {12034} (\bibinfo {year} {2012})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Wierenga}\ \emph {et~al.}(2018)\citenamefont
+  {Wierenga}, \citenamefont {{Ten Wolde}},\ and\ \citenamefont
+  {Becker}}]{Wierenga2018}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Wierenga}}, \bibinfo {author} {\bibfnamefont {P.~R.}\ \bibnamefont {{Ten
+  Wolde}}}, \ and\ \bibinfo {author} {\bibfnamefont {N.~B.}\ \bibnamefont
+  {Becker}},\ }\href {\doibase 10.1103/PhysRevE.97.042404} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. E}\ }\textbf {\bibinfo {volume}
+  {97}},\ \bibinfo {pages} {042404} (\bibinfo {year} {2018})}\BibitemShut {NoStop}%
+  \bibitem [{Sup()}]{Supplemental}%
+  \BibitemOpen
+  \href@noop {} {}\bibinfo {note} {See Supplemental Material at (URL will be
+  inserted by publisher)}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Aldrovandi}(2001)}]{Aldrovandi2001}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~R.}\ \bibnamefont
+  {Aldrovandi}},\ }\href
+  {https://catalog.lib.uchicago.edu/vufind/Record/4529102} {\emph {\bibinfo
+  {title} {{Special matrices of mathematical physics : stochastic, circulant,
+  and Bell matrices}}}}\ (\bibinfo  {publisher} {World Scientific},\ \bibinfo
+  {year} {2001})\ p.\ \bibinfo {pages} {323}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Vaikuntanathan}\ \emph {et~al.}(2014)\citenamefont
+  {Vaikuntanathan}, \citenamefont {Gingrich},\ and\ \citenamefont
+  {Geissler}}]{Vaikuntanathan2014a}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Vaikuntanathan}}, \bibinfo {author} {\bibfnamefont {T.~R.}\ \bibnamefont
+  {Gingrich}}, \ and\ \bibinfo {author} {\bibfnamefont {P.~L.}\ \bibnamefont
+  {Geissler}},\ }\href {\doibase 10.1103/PhysRevE.89.062108} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. E}\ }\textbf {\bibinfo {volume}
+  {89}},\ \bibinfo {pages} {062108} (\bibinfo {year} {2014})} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Crisanti}\ \emph {et~al.}(1993)\citenamefont
+  {Crisanti}, \citenamefont {Paladin},\ and\ \citenamefont
+  {Vulpiani}}]{Crisanti1993}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Crisanti}}, \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Paladin}}, \
+  and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Vulpiani}},\ }\href
+  {https://catalog.lib.uchicago.edu/vufind/Record/1509520} {\emph {\bibinfo
+  {title} {{Products of random matrices in statistical physics}}}}\ (\bibinfo
+  {publisher} {Springer},\ \bibinfo {year} {1993})\ p.\ \bibinfo {pages}
+  {166}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Amir}\ \emph {et~al.}(2016)\citenamefont {Amir},
+  \citenamefont {Hatano},\ and\ \citenamefont {Nelson}}]{Amir2016}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Amir}}, \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Hatano}}, \ and\
+  \bibinfo {author} {\bibfnamefont {D.~R.}\ \bibnamefont {Nelson}},\ }\href
+  {\doibase 10.1103/PhysRevE.93.042310} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. E}\ }\textbf {\bibinfo {volume} {93}},\ \bibinfo
+  {pages} {042310} (\bibinfo {year} {2016})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Onsager}(1944)}]{Onsager1944}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
+  {Onsager}},\ }\href {\doibase 10.1103/PhysRev.65.117} {\bibfield  {journal}
+  {\bibinfo  {journal} {Phys. Rev.}\ }\textbf {\bibinfo {volume} {65}},\
+  \bibinfo {pages} {117} (\bibinfo {year} {1944})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Milo}\ and\ \citenamefont
+  {Phillips}(2015)}]{cellbionumbers}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Milo}}\ and\ \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Phillips}},\ }\href
+  {https://www.crcpress.com/Cell-Biology-by-the-Numbers/Milo-Phillips/p/book/9780815345374}
+  {\emph {\bibinfo {title} {{Cell biology by the numbers}}}}\ (\bibinfo
+  {publisher} {Garland Science},\ \bibinfo {year} {2015})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Mihalcescu}\ \emph {et~al.}(2004)\citenamefont
+  {Mihalcescu}, \citenamefont {Hsing},\ and\ \citenamefont
+  {Leibler}}]{Mihalcescu2004}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {I.}~\bibnamefont
+  {Mihalcescu}}, \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {Hsing}}, \
+  and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Leibler}},\
+  }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Nature}\ }\textbf
+  {\bibinfo {volume} {430}},\ \bibinfo {pages} {81} (\bibinfo {year}
+  {2004})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {del Junco}\ and\ \citenamefont
+  {Vaikuntanathan}(2019)}]{DelJunco2019b}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {del
+  Junco}}\ and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Vaikuntanathan}},\ }\href@noop {} {\enquote {\bibinfo {title} {Robust
+  oscillations in multi-cyclic models of biochemical clocks},}\ } (\bibinfo
+  {year} {2019}),\ \Eprint {http://arxiv.org/abs/1909.02534} {arXiv:1909.02534
+  [cond-mat.stat-mech]} \BibitemShut {NoStop}%
+\end{thebibliography}%
+
+\end{document}
