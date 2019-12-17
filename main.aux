@@ -17,9 +17,9 @@
 \newlabel{FirstPage}{{}{1}{}{}{}}
 \@writefile{toc}{\contentsline {title}{High chemical affinity increases the robustness of biochemical oscillations}{1}{}}
 \@writefile{toc}{\contentsline {abstract}{Abstract}{1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}{}}
 \citation{Cao2015,Barato2017,Barato2015,Gingrich2016}
 \citation{Barato2017}
-\citation{Supplemental}
 \citation{Barato2017}
 \citation{Aldrovandi2001}
 \citation{Vaikuntanathan2014a}
@@ -27,27 +27,59 @@
 \citation{Amir2016}
 \citation{Vaikuntanathan2014a}
 \citation{Onsager1944}
-\citation{Supplemental}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces The model for a biochemical oscillator studied in this paper. (a) Biochemical oscillators trace a limit cycle in a high-dimensional state space of chemical concentrations. In this example of the KaiC oscillator, reprinted from Ref.\nobreakspace  {}\citenum  {Leypunskiy2017}, the axes represent the fraction of KaiC phosphorylated at each of two sites. (b) We approximate these limit cycles by projecting them down on to a single cycle of states. (c) Each node represents a state of the system. The system hops between states with rates $k_i^\pm $ and is driven out of equilibrium by an affinity $\mathcal  A$. This creates a net clockwise current, resulting in damped oscillations in the probability of finding the system in a particular state. We probe the dependence of the oscillation time scales on the rates of the network by adding `defect rates' $h_j^\pm $ to the uniform network, for which the time scales are known, and obtaining expressions for the coherence and period of oscillations in the disordered network. Our theory works in disordered networks where no two rates are equal.}}{2}{}}
 \newlabel{fig:network}{{1}{2}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {II}Analytical theory for $\mathcal  R$ and $T$ in disordered networks with high affinity}{2}{}}
+\newlabel{sec:theory}{{II}{2}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A}Eigenvalues of uniform networks}{2}{}}
+\newlabel{sec:uniform}{{II\tmspace  +\thinmuskip {.1667em}A}{2}{}{}{}}
 \newlabel{eq:bound}{{1}{2}{}{}{}}
-\newlabel{eq:phinew}{{3}{2}{}{}{}}
-\newlabel{eq:gamma}{{4}{2}{}{}{}}
-\citation{Supplemental}
+\newlabel{eq:w0}{{2}{2}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B}Transfer matrix formulation of the eigenvalue problem}{2}{}}
+\newlabel{sec:transfer}{{II\tmspace  +\thinmuskip {.1667em}B}{2}{}{}{}}
+\newlabel{eq:transfer_step1}{{3}{3}{}{}{}}
+\newlabel{eq:transfer_step2}{{5}{3}{}{}{}}
+\newlabel{eq:transfer_step3}{{6}{3}{}{}{}}
+\newlabel{eq:transfer_step4}{{7}{3}{}{}{}}
+\newlabel{eq:transfer_step5}{{8}{3}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {C}One defect rate}{3}{}}
+\newlabel{sec:onedefect}{{II\tmspace  +\thinmuskip {.1667em}C}{3}{}{}{}}
+\newlabel{eq:phipert}{{10}{3}{}{}{}}
+\newlabel{eq:eigv1}{{13}{3}{}{}{}}
+\newlabel{eq:eigv2}{{14}{3}{}{}{}}
+\newlabel{eq:PT1}{{16}{3}{}{}{}}
+\newlabel{eq:constant}{{17}{3}{}{}{}}
+\newlabel{eq:ABreduced}{{21}{3}{}{}{}}
+\newlabel{eq:z}{{22}{3}{}{}{}}
 \citation{Rust2007,Terauchi2007,cellbionumbers}
+\newlabel{eq:zeta}{{26}{4}{}{}{}}
+\newlabel{eq:zetaprime}{{29}{4}{}{}{}}
+\newlabel{eq:gamma-self-cons}{{31}{4}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {D}Many Defect Rates}{4}{}}
+\newlabel{sec:manydefects}{{II\tmspace  +\thinmuskip {.1667em}D}{4}{}{}{}}
+\newlabel{eq:gamma-self-cons}{{II\tmspace  +\thinmuskip {.1667em}D}{4}{}{}{}}
+\newlabel{eq:ABmult}{{32}{4}{}{}{}}
+\newlabel{eq:ABmultreduced}{{33}{4}{}{}{}}
+\newlabel{eq:phinew}{{34}{4}{}{}{}}
+\newlabel{eq:gamma}{{35}{4}{}{}{}}
 \citation{Woelfle2004}
+\citation{Marsland2019}
 \citation{Barato2017}
-\citation{Barato2017}
+\@writefile{toc}{\contentsline {section}{\numberline {III}Numerical results}{5}{}}
+\newlabel{sec:numerical}{{III}{5}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A}Accurate theoretical predictions with strong nonequilibrium driving}{5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B}Biologically relevant rate fluctuations}{5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Coherence $\mathcal  R$ and period $T$ of an oscillator as a function of the percent of defect rates. The values of $\mathcal  R$/$T$ become more robust (spread of values decreases) and predictable at high affinity. Results are for networks with $N = 100$ states. All CCW rates are set to 1. CW defect rates $h_j^+$ are drawn from a Gaussian distribution with mean $k^+ = \exp (\mathcal  A_0/N)$ and standard deviation $0.4k^+$. Because the distributions of $\mathcal  R$ and $T$ are asymmetric, we plot the median (solid line) $\pm $ one quartile (shaded region) of the numerical values for 500 samples of defect rates. The dashed lines are the median theoretical predictions for 500 samples of defect rates. For $\mathcal  A_0/N = 2$ (blue), our theory is accurate even when \% defects $\approx 100$. On the right, we compare the values of $\mathcal  R/\mathcal  R_0$ and $T_0/T$ for individual realizations of the random networks with 50\% defects (parameters indicated by a star).}}{5}{}}
+\newlabel{fig:rtvsm}{{2}{5}{}{}{}}
 \citation{Mihalcescu2004}
 \citation{Terauchi2007}
 \citation{Cao2015,Barato2017}
 \citation{DelJunco2019b}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Coherence $\mathcal  R$ and period $T$ of an oscillator as a function of the percent of defect rates. The values of $\mathcal  R$/$T$ become more robust (spread of values decreases) and predictable at high affinity. Results are for networks with $N = 100$ states. All CCW rates are set to 1. CW defect rates $h_j^+$ are drawn from a Gaussian distribution with mean $k^+ = \exp (\mathcal  A_0/N)$ and standard deviation $0.4k^+$. Because the distributions of $\mathcal  R$ and $T$ are asymmetric, we plot the median (solid line) $\pm $ one quartile (shaded region) of the numerical values for 500 samples of defect rates. The dashed lines are the median theoretical predictions for 500 samples of defect rates. For $\mathcal  A_0/N = 2$ (blue), our theory is accurate even when \% defects $\approx 100$. On the right, we compare the values of $\mathcal  R/\mathcal  R_0$ and $T_0/T$ for individual realizations of the random networks with 50\% defects (parameters indicated by a star).}}{4}{}}
-\newlabel{fig:rtvsm}{{2}{4}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces (a) $\mathcal  R$ and (b) $T$ for totally disordered networks of size $N = 100$ as a function of the standard deviation of the distribution of defect rates. All CCW rates are set to 1. CW defect rates $h_j^+$ are drawn from a Gaussian distribution with mean $k^+ = \exp (\mathcal  A_0/N)$ and standard deviation $\sigma = \mathaccentV {tilde}07E\sigma k^+$. Black dashed lines are theoretical predictions. In the insets, we compare the values of $\mathcal  R/\mathcal  R_0$ and $T_0/T$ for individual realizations of the random networks with parameters indicated by a star. (c) The absolute value of $\mathcal  R$ as a function of $\mathcal  A_0/N$ plateaus in a totally disordered network (here we show results for $\mathaccentV {tilde}07E\sigma = 0.3$) as well as in uniform networks (given by the bound in Eq.\nobreakspace  {}1{}{}{}\hbox {}). As a result, $d\mathcal  R/d(\mathcal  A_0/N)$ goes smoothly to zero with the same rate in the disordered and uniform networks, even though $\mathcal  R$ is far from the bound. (d) The `spread', defined as the distance between the median $\pm $ 1 quartile of the data, as a function of the affinity. As predicted, it decreases with increasing affinity.}}{4}{}}
-\newlabel{fig:rtvssigma}{{3}{4}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {}Acknowledgements}{4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {}Acknowledgments}{4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces (a) $\mathcal  R$ and (b) $T$ for totally disordered networks of size $N = 100$ as a function of the standard deviation of the distribution of defect rates. All CCW rates are set to 1. CW defect rates $h_j^+$ are drawn from a Gaussian distribution with mean $k^+ = \exp (\mathcal  A_0/N)$ and standard deviation $\sigma = \mathaccentV {tilde}07E\sigma k^+$. Black dashed lines are theoretical predictions. (c) The absolute value of $\mathcal  R$ as a function of $\mathcal  A_0/N$ plateaus in a totally disordered network (here we show results for $\mathaccentV {tilde}07E\sigma = 0.3$) as well as in uniform networks (given by the bound in Eq.\nobreakspace  {}1{}{}{}\hbox {}). As a result, $d\mathcal  R/d(\mathcal  A_0/N)$ goes smoothly to zero in the disordered and uniform networks, even though $\mathcal  R$ is far from the bound. (d) The `spread', defined as the distance between the median $\pm $ 1 quartile of the data, as a function of the affinity. As predicted, it decreases with increasing affinity.}}{6}{}}
+\newlabel{fig:rtvssigma}{{3}{6}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Comparing the values of $\mathcal  R/\mathcal  R_0$ and $T/T_0$ for individual realizations of random networks. Each point represents the period of a network with randomly generated rates with parameters indicated by a star in Fig.\nobreakspace  {}3{}{}{}\hbox {}. Open circles on the far right represent the approximation in the limit where reverse steps can be neglected ($T = \DOTSB \sum@ \slimits@ _i 1/k_i^+$). At $\mathcal  A_0/N = 0.5$, where neglecting reverse steps underestimates the period by more than 50\%, our theory provides an accurate estimate. Note that in Fig.\nobreakspace  {}3{}{}{}\hbox {} of the manuscript we plotted $(T/T_0)^{-1}$; here we plot $(T/T_0)$ as it results in a more compact plot.}}{6}{}}
+\newlabel{fig:scatterplots}{{4}{6}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Discussion and Conclusions}{6}{}}
 \bibcite{Johnson2017}{{1}{2017}{{Johnson\ \emph  {et~al.}}}{{Johnson, Zhao, Xu,\ and\ Mori}}}
 \bibcite{Panda2002}{{2}{2002}{{Panda\ \emph  {et~al.}}}{{Panda, Hogenesch,\ and\ Kay}}}
 \bibcite{Novak2008}{{3}{2008}{{Nov{\'{a}}k\ and\ Tyson}}{{}}}
@@ -75,18 +107,43 @@
 \bibcite{Mehta2012}{{25}{2012}{{Mehta\ and\ Schwab}}{{}}}
 \bibcite{Murugan2012}{{26}{2012}{{Murugan\ \emph  {et~al.}}}{{Murugan, Huse,\ and\ Leibler}}}
 \bibcite{Wierenga2018}{{27}{2018}{{Wierenga\ \emph  {et~al.}}}{{Wierenga, {Ten Wolde},\ and\ Becker}}}
-\bibcite{Supplemental}{{28}{}{{Sup}}{{}}}
-\bibcite{Aldrovandi2001}{{29}{2001}{{Aldrovandi}}{{}}}
-\bibcite{Vaikuntanathan2014a}{{30}{2014}{{Vaikuntanathan\ \emph  {et~al.}}}{{Vaikuntanathan, Gingrich,\ and\ Geissler}}}
-\bibcite{Crisanti1993}{{31}{1993}{{Crisanti\ \emph  {et~al.}}}{{Crisanti, Paladin,\ and\ Vulpiani}}}
-\bibcite{Amir2016}{{32}{2016}{{Amir\ \emph  {et~al.}}}{{Amir, Hatano,\ and\ Nelson}}}
-\bibcite{Onsager1944}{{33}{1944}{{Onsager}}{{}}}
-\bibcite{cellbionumbers}{{34}{2015}{{Milo\ and\ Phillips}}{{}}}
-\bibcite{Mihalcescu2004}{{35}{2004}{{Mihalcescu\ \emph  {et~al.}}}{{Mihalcescu, Hsing,\ and\ Leibler}}}
-\bibcite{DelJunco2019b}{{36}{2019}{{del Junco\ and\ Vaikuntanathan}}{{}}}
+\bibcite{Aldrovandi2001}{{28}{2001}{{Aldrovandi}}{{}}}
+\bibcite{Vaikuntanathan2014a}{{29}{2014}{{Vaikuntanathan\ \emph  {et~al.}}}{{Vaikuntanathan, Gingrich,\ and\ Geissler}}}
+\bibcite{Crisanti1993}{{30}{1993}{{Crisanti\ \emph  {et~al.}}}{{Crisanti, Paladin,\ and\ Vulpiani}}}
+\bibcite{Amir2016}{{31}{2016}{{Amir\ \emph  {et~al.}}}{{Amir, Hatano,\ and\ Nelson}}}
+\bibcite{Onsager1944}{{32}{1944}{{Onsager}}{{}}}
+\bibcite{cellbionumbers}{{33}{2015}{{Milo\ and\ Phillips}}{{}}}
+\bibcite{Mihalcescu2004}{{34}{2004}{{Mihalcescu\ \emph  {et~al.}}}{{Mihalcescu, Hsing,\ and\ Leibler}}}
+\bibcite{DelJunco2019b}{{35}{2019}{{del Junco\ and\ Vaikuntanathan}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {}Acknowledgments}{7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {}References}{7}{}}
+\newlabel{LastBibItem}{{35}{7}{}{}{}}
+\@writefile{toc}{\appendix }
+\@writefile{toc}{\contentsline {section}{\numberline {A}The largest non-zero eigenvalue captures timescales of disordered oscillators}{7}{}}
+\newlabel{sec:eigenvalue}{{A}{7}{}{}{}}
+\newlabel{eq:c11sum}{{A2}{8}{}{}{}}
+\newlabel{eq:c11}{{A3}{8}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Histograms of the relative difference between the first period of oscillations of the correlation function $C_{11}(t)$ ($T(1)$) and the period of oscillations due to the first eigenvalue $T_1 = 2\pi /\Im [\phi ]$. $T(1)$ is the location of the first peak of $C_{11}(t)$ obtained by exponentiating the full transition rate matrix. $T_1$ was calculated from the first eigenvalue, which was also obtained numerically. The data for each set of parameters were obtained from 100 randomly generated matrices (a) At constant $\mathcal  A/N = 2$ The agreement between $T(1)$ and $T_1$ gets worse with increasing disorder. (b) With the percent of defects held constant at 20\%, the agreement between $T(1)$ and $T_1$ improves with increasing $\mathcal  A/N$.}}{8}{}}
+\newlabel{fig:periodhistograms}{{5}{8}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {B}Calculation details}{8}{}}
+\newlabel{sec:calcdetails}{{B}{8}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1}Comparing to exact eigenvalues of $\mathbf  B$}{8}{}}
+\newlabel{sec:exacteig}{{B\tmspace  +\thinmuskip {.1667em}1}{8}{}{}{}}
+\newlabel{betaexact}{{B1}{8}{}{}{}}
+\citation{Barato2017}
 \bibstyle{apsrev4-1}
 \citation{REVTEX41Control}
 \citation{apsrev41Control}
-\@writefile{toc}{\contentsline {section}{\numberline {}References}{5}{}}
-\newlabel{LastBibItem}{{36}{5}{}{}{}}
-\newlabel{LastPage}{{}{5}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2}Linear expansion of Eq.\nobreakspace  {}II\tmspace  +\thinmuskip {.1667em}D{}{}{}\hbox {}}{9}{}}
+\newlabel{sec:linexp}{{B\tmspace  +\thinmuskip {.1667em}2}{9}{}{}{}}
+\newlabel{eq:gamma-expand-1}{{B8}{9}{}{}{}}
+\newlabel{eq:gamma-expand-mult}{{B9}{9}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3}Defect spacing $L_j = 0$}{9}{}}
+\newlabel{sec:lj0}{{B\tmspace  +\thinmuskip {.1667em}3}{9}{}{}{}}
+\newlabel{eq:evpair}{{B14}{9}{}{}{}}
+\newlabel{eq:evpair}{{B16}{9}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {C}Constant affinity results}{9}{}}
+\newlabel{sec:constaff}{{C}{9}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Coherence $\mathcal  R$ and period $T$ of an oscillator with $N = 100$ states as a function of the percent of defect rates. All counterclockwise rates are set to 1. We restrict ourselves to even numbers of defect rates. Half of the clockwise defect rates $\{h_j^+\}$ are drawn from the same distribution as in Fig.\nobreakspace  {}2{}{}{}\hbox {}. We set the other half of the defect rates to $\{\exp (\mathcal  A_0/N)^2/h_j^+\}$, ensuring that the affinity remains constant and equal to $\mathcal  A_0$. Colors and lines have the same meaning as in Fig.\nobreakspace  {}2{}{}{}\hbox {}.}}{10}{}}
+\newlabel{fig:rtvsm-constaff}{{6}{10}{}{}{}}
+\newlabel{LastPage}{{}{10}{}{}{}}

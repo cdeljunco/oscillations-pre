@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  18 NOV 2019 15:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  17 DEC 2019 09:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -74,9 +74,10 @@ File: aps4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ for docu
 mentation)
 Class revtex4-1 Info: RevTeX society APS selected on input line 31.
 )
-Class revtex4-1 Info: Selecting journal prl on input line 7544.
-Class revtex4-1 Info: APS journal PRL selected on input line 7545.
 
+Class revtex4-1 Warning: No journal specified, using default pra.
+
+Class revtex4-1 Info: APS journal PRA selected on input line 7545.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/revtex/aps10pt4-1.rtx
 File: aps10pt4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ for 
 documentation)
@@ -1216,34 +1217,40 @@ Package: xparse 2017/05/13 L3 Experimental document command parser
 . Defining command \homework with sig. '' on line 764.
 .................................................
 )
-Class revtex4-1 Info: Patching LaTeX tabular. on input line 33.
-Class revtex4-1 Info: Robustifying \LaTeX's \boldmath command on input line 33.
+Class revtex4-1 Info: Patching LaTeX tabular. on input line 34.
+Class revtex4-1 Info: Robustifying \LaTeX's \boldmath command on input line 34.
 
-Class revtex4-1 Info: cite was not loaded (OK!) on input line 33.
-Class revtex4-1 Info: mcite was not loaded (OK!) on input line 33.
-Class revtex4-1 Info: multicol was not loaded (OK!) on input line 33.
+Class revtex4-1 Info: cite was not loaded (OK!) on input line 34.
+Class revtex4-1 Info: mcite was not loaded (OK!) on input line 34.
+Class revtex4-1 Info: multicol was not loaded (OK!) on input line 34.
 
 
 LaTeX Warning: Unused global option(s):
-    [bibliograpy].
+    [prebibliograpy].
 
-(./main.aux)
+(./main.aux
+
+LaTeX Warning: Label `eq:gamma-self-cons' multiply defined.
+
+
+LaTeX Warning: Label `eq:evpair' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-
-(/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+ (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count153
 \scratchdimen=\dimen146
@@ -1311,71 +1318,111 @@ e
 <fig1.pdf, id=1, 208.78pt x 126.4725pt>
 File: fig1.pdf Graphic file (type pdf)
  <use fig1.pdf>
-Package pdftex.def Info: fig1.pdf used on input line 54.
+Package pdftex.def Info: fig1.pdf used on input line 56.
 (pdftex.def)             Requested size: 221.3985pt x 134.12389pt.
  [1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 65.
+ on input line 67.
 
-
-Overfull \hbox (20.68326pt too wide) in paragraph at lines 87--87
+[2 <./fig1.pdf>]
+Overfull \hbox (42.12915pt too wide) in paragraph at lines 235--235
 [] 
  []
 
-[2 <./fig1.pdf>] <fig2.pdf, id=235, 307.1475pt x 177.66376pt>
+[3] [4] <fig2.pdf, id=245, 307.1475pt x 177.66376pt>
 File: fig2.pdf Graphic file (type pdf)
  <use fig2.pdf>
-Package pdftex.def Info: fig2.pdf used on input line 106.
+Package pdftex.def Info: fig2.pdf used on input line 341.
 (pdftex.def)             Requested size: 246.0pt x 142.29655pt.
 
-<fig3.pdf, id=236, 400.49625pt x 237.88875pt>
+<fig3.pdf, id=246, 309.155pt x 183.68625pt>
 File: fig3.pdf Graphic file (type pdf)
  <use fig3.pdf>
-Package pdftex.def Info: fig3.pdf used on input line 114.
-(pdftex.def)             Requested size: 246.0pt x 146.12102pt.
- [3]
+Package pdftex.def Info: fig3.pdf used on input line 349.
+(pdftex.def)             Requested size: 246.0pt x 146.16719pt.
+
+<fig4.pdf, id=247, 379.4175pt x 134.5025pt>
+File: fig4.pdf Graphic file (type pdf)
+ <use fig4.pdf>
+Package pdftex.def Info: fig4.pdf used on input line 357.
+(pdftex.def)             Requested size: 246.0pt x 87.20802pt.
+ [5 <./fig2.pdf>]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 123.
+ on input line 364.
 
-[4 <./fig2.pdf> <./fig3.pdf>]
-Underfull \hbox (badness 1221) in paragraph at lines 468--475
+[6 <./fig3.pdf> <./fig4.pdf>]
+Underfull \hbox (badness 1221) in paragraph at lines 711--718
  []\OT1/cmr/m/n/9 R. R. Al-drovandi, \OT1/cmr/m/it/9 Spe-cial ma-tri-ces of mat
 h-e-mat-i-cal
  []
 
-[5] (./main.aux) ) 
+[7] <si-fig2.pdf, id=956, 338.26375pt x 114.4275pt>
+File: si-fig2.pdf Graphic file (type pdf)
+ <use si-fig2.pdf>
+Package pdftex.def Info: si-fig2.pdf used on input line 814.
+(pdftex.def)             Requested size: 246.0pt x 83.21883pt.
+
+Overfull \vbox (2.13759pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (2.13759pt too high) has occurred while \output is active []
+
+
+[8 <./si-fig2.pdf>]
+Overfull \hbox (2.96584pt too wide) in paragraph at lines 895--895
+[] 
+ []
+
+<si-fig3.pdf, id=1052, 229.85875pt x 144.54pt>
+File: si-fig3.pdf Graphic file (type pdf)
+ <use si-fig3.pdf>
+Package pdftex.def Info: si-fig3.pdf used on input line 912.
+(pdftex.def)             Requested size: 246.0pt x 154.69815pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[9] [10 <./si-fig3.pdf>] (./main.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 12367 strings out of 492995
- 215884 string characters out of 6132704
- 302052 words of memory out of 5000000
- 15849 multiletter control sequences out of 15000+600000
+ 12424 strings out of 492995
+ 216659 string characters out of 6132704
+ 325625 words of memory out of 5000000
+ 15904 multiletter control sequences out of 15000+600000
  9212 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,9n,53p,10380b,349s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmbx12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmbx9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmex10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmmi6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mi7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
-pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
-></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr
-/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
-local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/lo
-cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/loca
-l/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/
-texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/t
-exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on main.pdf (5 pages, 1798320 bytes).
+ 39i,12n,53p,10380b,399s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
+usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr
+/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/l
+ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/loc
+al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local
+/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/te
+xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texli
+ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/
+2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/201
+7/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2017/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2017/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2017/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2017/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2017/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmti9.pfb>
+Output written on main.pdf (10 pages, 2315350 bytes).
 PDF statistics:
- 826 PDF objects out of 1000 (max. 8388607)
- 658 compressed objects within 7 object streams
+ 1272 PDF objects out of 1440 (max. 8388607)
+ 1005 compressed objects within 11 object streams
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
