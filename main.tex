@@ -809,8 +809,9 @@ The total period of the oscillations is therefore always $T_1$. Since $\Re[\phi_
 
 When defects are added the eigenvalues will no longer lie on a perfect circle in the plane, and the arguments above will no longer hold exactly. $T_j/T_1$ may no longer be an integer, so that the total period of oscillations $T\neq T_1$, and moreover the period of the oscillations at short times ($T(1)$) and the period of oscillations at long times ($T(\tau)$) may not be the same. In Fig.~\ref{fig:periodhistograms} we show histograms of the relative difference $(T(1) - T_1)/T(1)$ for different realization of matrices of size $N = 100$ with reverse rates all equal to 1, random forward rates $h_i^+$  chosen from a Gaussian distribution with mean $\mu = \exp(\aff/N)$ and variance $\sigma^2 = 0.25 \exp(\aff/N) $, and uniform forward rates $k^+$ set to maintain a constant $\aff$. We emphasize that here we are considering the difference between the first term of Eq.~\ref{eq:c11sum} and the full correlation function, both of which are obtained by numerical diagonalization; our theory presented in the main text is another level of approximation of $T_1$ on top of this.
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
+%\vspace{0.5cm}
 \includegraphics[width = \linewidth]{si-fig2.pdf}
 \caption{Histograms of the relative difference between the first period of oscillations of the correlation function $C_{11}(t)$ ($T(1)$) and the period of oscillations due to the first eigenvalue  $T_1 = 2\pi/\Im[\phi]$. $T(1)$ is the location of the first peak of $C_{11}(t)$ obtained by exponentiating the full transition rate matrix. $T_1$ was calculated from the first eigenvalue, which was also obtained numerically. The data for each set of parameters were obtained from 100 randomly generated matrices (a) At constant $\aff/N = 2$ The agreement between $T(1)$ and $T_1$ gets worse with increasing disorder. (b) With the percent of defects held constant at 20\%, the agreement between $T(1)$ and $T_1$ improves with increasing $\aff/N$.}
 \label{fig:periodhistograms}
