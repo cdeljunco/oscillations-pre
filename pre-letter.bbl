@@ -1,0 +1,136 @@
+%merlin.mbs apsrev4-1.bst 2010-07-25 4.21a (PWD, AO, DPC) hacked
+%Control: key (0)
+%Control: author (8) initials jnrlst
+%Control: editor formatted (1) identically to author
+%Control: production of article title (-1) disabled
+%Control: page (0) single
+%Control: year (1) truncated
+%Control: production of eprint (0) enabled
+\begin{thebibliography}{8}%
+\makeatletter
+\providecommand \@ifxundefined [1]{%
+ \@ifx{#1\undefined}
+}%
+\providecommand \@ifnum [1]{%
+ \ifnum #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \@ifx [1]{%
+ \ifx #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \natexlab [1]{#1}%
+\providecommand \enquote  [1]{``#1''}%
+\providecommand \bibnamefont  [1]{#1}%
+\providecommand \bibfnamefont [1]{#1}%
+\providecommand \citenamefont [1]{#1}%
+\providecommand \href@noop [0]{\@secondoftwo}%
+\providecommand \href [0]{\begingroup \@sanitize@url \@href}%
+\providecommand \@href[1]{\@@startlink{#1}\@@href}%
+\providecommand \@@href[1]{\endgroup#1\@@endlink}%
+\providecommand \@sanitize@url [0]{\catcode `\\12\catcode `\$12\catcode
+  `\&12\catcode `\#12\catcode `\^12\catcode `\_12\catcode `\%12\relax}%
+\providecommand \@@startlink[1]{}%
+\providecommand \@@endlink[0]{}%
+\providecommand \url  [0]{\begingroup\@sanitize@url \@url }%
+\providecommand \@url [1]{\endgroup\@href {#1}{\urlprefix }}%
+\providecommand \urlprefix  [0]{URL }%
+\providecommand \Eprint [0]{\href }%
+\providecommand \doibase [0]{http://dx.doi.org/}%
+\providecommand \selectlanguage [0]{\@gobble}%
+\providecommand \bibinfo  [0]{\@secondoftwo}%
+\providecommand \bibfield  [0]{\@secondoftwo}%
+\providecommand \translation [1]{[#1]}%
+\providecommand \BibitemOpen [0]{}%
+\providecommand \bibitemStop [0]{}%
+\providecommand \bibitemNoStop [0]{.\EOS\space}%
+\providecommand \EOS [0]{\spacefactor3000\relax}%
+\providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
+\let\auto@bib@innerbib\@empty
+%</preamble>
+\bibitem [{\citenamefont {Derrida}(1983)}]{Derrida1983}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
+  {Derrida}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Journal of statistical physics}\ }\textbf {\bibinfo {volume} {31}},\
+  \bibinfo {pages} {433} (\bibinfo {year} {1983})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Paijmans}\ \emph {et~al.}(2017)\citenamefont
+  {Paijmans}, \citenamefont {Lubensky},\ and\ \citenamefont {ten
+  Wolde}}]{Paijmans2017}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Paijmans}}, \bibinfo {author} {\bibfnamefont {D.~K.}\ \bibnamefont
+  {Lubensky}}, \ and\ \bibinfo {author} {\bibfnamefont {P.~R.}\ \bibnamefont
+  {ten Wolde}},\ }\href {\doibase 10.1016/J.BPJ.2017.05.048} {\bibfield
+  {journal} {\bibinfo  {journal} {Biophys. J.}\ }\textbf {\bibinfo {volume}
+  {113}},\ \bibinfo {pages} {157} (\bibinfo {year} {2017})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Hong}\ \emph {et~al.}(2019)\citenamefont {Hong},
+  \citenamefont {Lavrentovich}, \citenamefont {Chavan}, \citenamefont
+  {Leypunskiy}, \citenamefont {Li}, \citenamefont {Matthews}, \citenamefont
+  {LiWang}, \citenamefont {Rust},\ and\ \citenamefont {Dinner}}]{Hong2019}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
+  {Hong}}, \bibinfo {author} {\bibfnamefont {D.~O.}\ \bibnamefont
+  {Lavrentovich}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Chavan}}, \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Leypunskiy}},
+  \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Li}}, \bibinfo {author}
+  {\bibfnamefont {C.}~\bibnamefont {Matthews}}, \bibinfo {author}
+  {\bibfnamefont {A.}~\bibnamefont {LiWang}}, \bibinfo {author} {\bibfnamefont
+  {M.~J.}\ \bibnamefont {Rust}}, \ and\ \bibinfo {author} {\bibfnamefont
+  {A.~R.}\ \bibnamefont {Dinner}},\ }\href {\doibase 10.1101/835280} {\bibfield
+   {journal} {\bibinfo  {journal} {bioRxiv}\ } (\bibinfo {year} {2019}),\
+  10.1101/835280},\ \Eprint
+  {http://arxiv.org/abs/https://www.biorxiv.org/content/early/2019/11/08/835280.full.pdf}
+  {https://www.biorxiv.org/content/early/2019/11/08/835280.full.pdf}
+  \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Marsland}\ \emph {et~al.}(2019)\citenamefont
+  {Marsland}, \citenamefont {Cui},\ and\ \citenamefont
+  {Horowitz}}]{Marsland2019}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Marsland}}, \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {Cui}}, \
+  and\ \bibinfo {author} {\bibfnamefont {J.~M.}\ \bibnamefont {Horowitz}},\
+  }\href {\doibase 10.1098/rsif.2019.0098} {\bibfield  {journal} {\bibinfo
+  {journal} {J. R. Soc. Interface}\ }\textbf {\bibinfo {volume} {16}},\
+  \bibinfo {pages} {20190098} (\bibinfo {year} {2019})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Barato}\ and\ \citenamefont
+  {Seifert}(2017)}]{Barato2017}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~C.}\ \bibnamefont
+  {Barato}}\ and\ \bibinfo {author} {\bibfnamefont {U.}~\bibnamefont
+  {Seifert}},\ }\href {\doibase 10.1103/PhysRevE.95.062409} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. E}\ }\textbf {\bibinfo {volume}
+  {95}},\ \bibinfo {pages} {062409} (\bibinfo {year} {2017})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Cao}\ \emph {et~al.}(2015)\citenamefont {Cao},
+  \citenamefont {Wang}, \citenamefont {Ouyang},\ and\ \citenamefont
+  {Tu}}]{Cao2015}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
+  {Cao}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Wang}}, \bibinfo
+  {author} {\bibfnamefont {Q.}~\bibnamefont {Ouyang}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {Y.}~\bibnamefont {Tu}},\ }\href {\doibase 10.1038/nphys3412}
+  {\bibfield  {journal} {\bibinfo  {journal} {Nat. Phys.}\ }\textbf {\bibinfo
+  {volume} {11}},\ \bibinfo {pages} {772} (\bibinfo {year} {2015})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {del Junco}\ and\ \citenamefont
+  {Vaikuntanathan}(2019)}]{DelJunco2019b}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {del
+  Junco}}\ and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Vaikuntanathan}},\ }\href@noop {} {\enquote {\bibinfo {title} {Robust
+  oscillations in multi-cyclic models of biochemical clocks},}\ } (\bibinfo
+  {year} {2019}),\ \Eprint {http://arxiv.org/abs/1909.02534} {arXiv:1909.02534
+  [cond-mat.stat-mech]} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Nov{\'{a}}k}\ and\ \citenamefont
+  {Tyson}(2008)}]{Novak2008}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
+  {Nov{\'{a}}k}}\ and\ \bibinfo {author} {\bibfnamefont {J.~J.}\ \bibnamefont
+  {Tyson}},\ }\href {\doibase 10.1038/nrm2530} {\bibfield  {journal} {\bibinfo
+  {journal} {Nat. Rev. Mol. Cell Biol.}\ }\textbf {\bibinfo {volume} {9}},\
+  \bibinfo {pages} {981} (\bibinfo {year} {2008})}\BibitemShut {NoStop}%
+\end{thebibliography}%

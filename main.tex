@@ -362,9 +362,9 @@ Because the distributions of $\R$ and $T$ are asymmetric, we plot the median (so
 \section{Discussion and Conclusions} 
 Biochemical oscillators, which can function as internal clocks, operate in noisy environments that can affect the ability of the clock to tell time accurately; yet somehow these oscillations continue with a well-defined period over long times. Here, we present analytical calculations supported by numerical results that show how a biochemical oscillator modeled as a Markov jump process on a ring of states (Fig.~\ref{fig:network}) can use high chemical affinity (for instance, in the form of ATP) to robustly maintain and tune its time scales even in the presence of a substantial amount of disorder. While previous work has postulated an upper bound on the number of coherent oscillations that such a model can support in terms of the chemical affinity, the bound can be loose, and does not elucidate the dependence on the details of the rates in the network~\cite{Barato2017}.  We close this gap by showing how affinity can dramatically decrease the number of relevant variables controlling the coherence and period of oscillations. 
 
-Specifically, we consider Markov state networks such as those in Fig.~\ref{fig:network}c and sample the rates from a probability distribution in order to mimic disorder in biological systems. We consider networks with quenched disorder in order to probe the synchronization between multiple noninteracting oscillators (e.g. in different cells~\cite{Mihalcescu2004}), and as a proxy for the variation in a single oscillator's period when the rates are fluctuating over time.  Our analytical theory in Eqs.~\ref{eq:phinew} - \ref{eq:gamma} reveals that in the limit of high affinity the arrangement of the rates becomes irrelevant, and the period of oscillations $T$  and the number of coherent oscillations $\R$ depend only on the magnitude of the rates. As a result, in the limit of high affinity, we can accurately predict $\R$ and $T$ for individual realizations of the rate disorder knowing only the values of the rates. We note that while our analytical results are formally valid only when $\exp(-\aff/N) \to 0$, they do not completely neglect the possibility of reverse transitions on the network, where the period of the oscillator is simply $T = \sum_i 1/k_i^+$. In Fig.~\ref{fig:scatterplots} we compare our theory to this trivial approximation and show that our prediction is quite even accurate at small values of $\aff/N$ where the trivial approximation underestimates the period by over 50\%. A consequence of our prediction is that for a given probability distribution of the rates, the possible values of $\R$ and $T$ for different realizations of the rates are more narrowly distributed about their average values because different arrangements of the rates no longer affect the time scales. Taken together, this means that when the affinity is high $\R$ and $T$ can be well-approximated from a small, fixed number of parameters that does not scale with system size - namely, enough to specify the single-site probability distribution of the rates - as opposed to $\mathcal O(N)$ parameters required to specify the values and locations of all the rates that are generally expected to determine $\R$ and $T$.
+Specifically, we consider Markov state networks such as those in Fig.~\ref{fig:network}c and sample the rates from a probability distribution in order to mimic disorder in biological systems. We consider networks with quenched disorder in order to probe the synchronization between multiple noninteracting oscillators (e.g. in different cells~\cite{Mihalcescu2004}), and as a proxy for the variation in a single oscillator's period when the rates are fluctuating over time.  Our analytical theory in Eqs.~\ref{eq:phinew} - \ref{eq:gamma} reveals that in the limit of high affinity the arrangement of the rates becomes irrelevant, and the period of oscillations $T$  and the number of coherent oscillations $\R$ depend only on the magnitude of the rates. As a result, in the limit of high affinity, we can accurately predict $\R$ and $T$ for individual realizations of the rate disorder knowing only the values of the rates. We note that while our analytical results are formally valid only when $\exp(-\aff/N) \to 0$, they do not completely neglect the possibility of reverse transitions on the network, where the period of the oscillator is simply $T = \sum_i 1/k_i^+$. In Fig.~\ref{fig:scatterplots} we compare our theory to this trivial approximation and show that our prediction is quite even accurate at small values of $\aff/N$ where the trivial approximation underestimates the period by over 50\%. We also wish to contrast our results with expressions for the velocity and diffusion coefficients for periodic, disordered, one-dimensional Markov networks have been derived previously in the literature~\cite{Derrida1983}. First, in this paper we formally calculate a different quantity: an eigenvalue, as opposed to a first passage time.  Second, these expressions in Ref.~\cite{Derrida1983} include positional correlations between rates, which can modify the transport properties; simplified expressions require an assumption that the rates are uncorrelated.  Our work shows how non-equilibrium driving can make these correlations irrelevant.
 
-Our results give insight in to why biochemical oscillators might evolve to consume large amounts of energy in the form of ATP~\cite{Terauchi2007}: in addition to the previously known function of suppressing uncertainty in the period of the oscillator for a system with uniform rates~\cite{Cao2015, Barato2017}, it also makes the time scales of the oscillator more robust to fluctuations in the rates caused by the noisy environment of the cell by decoupling these rates.
+A consequence of our prediction is that for a given probability distribution of the rates, the possible values of $\R$ and $T$ for different realizations of the rates are more narrowly distributed about their average values because different arrangements of the rates no longer affect the time scales. Taken together, this means that when the affinity is high $\R$ and $T$ can be well-approximated from a small, fixed number of parameters that does not scale with system size - namely, enough to specify the single-site probability distribution of the rates - as opposed to $\mathcal O(N)$ parameters required to specify the values and locations of all the rates that are generally expected to determine $\R$ and $T$. Our results give insight in to why biochemical oscillators might evolve to consume large amounts of energy in the form of ATP~\cite{Terauchi2007}: in addition to the previously known function of suppressing uncertainty in the period of the oscillator for a system with uniform rates~\cite{Cao2015, Barato2017}, it also makes the time scales of the oscillator more robust to fluctuations in the rates caused by the noisy environment of the cell by decoupling these rates.
 
 Although we used the example of KaiABC in this work, the Markov cycle representation is not limited to post-translational oscillators with conserved protein copy numbers and the more common transcription-translation oscillators can also be studied in this paradigm. On the other hand, the generality of our results is limited by restricting ourselves to a single cycle of states, representing the average path of a limit-cycle oscillator in a high-dimensional state space. %We anticipate that our results can be extended to situations where the oscillator is allowed to fluctuate off of this average path. %In Ref.~\cite{Barato2017}, the authors argue that in a multicyclic network one cycle will dominate and that the bound on global oscillations will be limited by the affinity and number of states of the dominant cycle. Similarly, 
 If the oscillator has a dominant cycle and multiple secondary cycles, we show elsewhere~\cite{DelJunco2019b} that our results can be applied by coarse-graining the secondary cycles to obtain effective rates and then using our expression in Eq.~\ref{eq:phinew} for the main cycle. %This extension will be explored in forthcoming work.  
@@ -387,7 +387,7 @@ We thank Robert Jack and Kabir Husain for helpful comments on an earlier version
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{32}%
+\begin{thebibliography}{36}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -541,7 +541,7 @@ We thank Robert Jack and Kabir Husain for helpful comments on an earlier version
   {\bibfnamefont {H.}~\bibnamefont {Iwasaki}}, \bibinfo {author} {\bibfnamefont
   {T.}~\bibnamefont {Oyama}}, \ and\ \bibinfo {author} {\bibfnamefont
   {T.}~\bibnamefont {Kondo}},\ }\href {\doibase 10.1126/science.1108451}
-  {\bibfield  {journal} {\bibinfo  {journal} {Science.}\ }\textbf
+  {\bibfield  {journal} {\bibinfo  {journal} {Science (80-. ).}\ }\textbf
   {\bibinfo {volume} {308}},\ \bibinfo {pages} {414} (\bibinfo {year}
   {2005})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Rust}\ \emph {et~al.}(2007)\citenamefont {Rust},
@@ -554,7 +554,7 @@ We thank Robert Jack and Kabir Husain for helpful comments on an earlier version
   {author} {\bibfnamefont {D.~S.}\ \bibnamefont {Fisher}}, \ and\ \bibinfo
   {author} {\bibfnamefont {E.~K.}\ \bibnamefont {O'Shea}},\ }\href {\doibase
   10.1126/science.1148596} {\bibfield  {journal} {\bibinfo  {journal} {Science
-  .}\ }\textbf {\bibinfo {volume} {318}},\ \bibinfo {pages} {809}
+  (80-. ).}\ }\textbf {\bibinfo {volume} {318}},\ \bibinfo {pages} {809}
   (\bibinfo {year} {2007})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {van Zon}\ \emph {et~al.}(2007)\citenamefont {van
   Zon}, \citenamefont {Lubensky}, \citenamefont {Altena},\ and\ \citenamefont
@@ -566,7 +566,8 @@ We thank Robert Jack and Kabir Husain for helpful comments on an earlier version
   {Altena}}, \ and\ \bibinfo {author} {\bibfnamefont {P.~R.}\ \bibnamefont {ten
   Wolde}},\ }\href {\doibase 10.1073/pnas.0608665104} {\bibfield  {journal}
   {\bibinfo  {journal} {Proc. Natl. Acad. Sci. U. S. A.}\ }\textbf {\bibinfo
-  {volume} {104}},\ \bibinfo {pages} {7420} (\bibinfo {year} {2007})} \BibitemShut {NoStop}%
+  {volume} {104}},\ \bibinfo {pages} {7420} (\bibinfo {year} {2007})},\ \Eprint
+  {http://arxiv.org/abs/0703009} {arXiv:0703009 [q-bio]} \BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Marsland}\ \emph {et~al.}(2019)\citenamefont
   {Marsland}, \citenamefont {Cui},\ and\ \citenamefont
   {Horowitz}}]{Marsland2019}%
@@ -627,7 +628,7 @@ We thank Robert Jack and Kabir Husain for helpful comments on an earlier version
   }\href {\doibase 10.1063/1.5032104} {\bibfield  {journal} {\bibinfo
   {journal} {J. Chem. Phys.}\ }\textbf {\bibinfo {volume} {149}},\ \bibinfo
   {pages} {045101} (\bibinfo {year} {2018})}\BibitemShut {NoStop}%
- \bibitem [{\citenamefont {Leypunskiy}\ \emph {et~al.}(2017)\citenamefont
+\bibitem [{\citenamefont {Leypunskiy}\ \emph {et~al.}(2017)\citenamefont
   {Leypunskiy}, \citenamefont {Lin}, \citenamefont {Yoo}, \citenamefont {Lee},
   \citenamefont {Dinner},\ and\ \citenamefont {Rust}}]{Leypunskiy2017}%
   \BibitemOpen
@@ -645,7 +646,7 @@ We thank Robert Jack and Kabir Husain for helpful comments on an earlier version
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~J.}\ \bibnamefont
   {Hopfield}},\ }\href
   {https://www.ncbi.nlm.nih.gov/pmc/articles/PMC434344/pdf/pnas00073-0345.pdf}
-  {\bibfield  {journal} {\bibinfo  {journal} {Proc. Natl. Acad. Sci. U.S.A.}\ }\textbf
+  {\bibfield  {journal} {\bibinfo  {journal} {Proc. Natl. Acad. Sci.}\ }\textbf
   {\bibinfo {volume} {71}},\ \bibinfo {pages} {4135} (\bibinfo {year}
   {1974})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Bennett}(1979)}]{Bennett1979}%
@@ -700,11 +701,8 @@ We thank Robert Jack and Kabir Husain for helpful comments on an earlier version
   Wolde}}}, \ and\ \bibinfo {author} {\bibfnamefont {N.~B.}\ \bibnamefont
   {Becker}},\ }\href {\doibase 10.1103/PhysRevE.97.042404} {\bibfield
   {journal} {\bibinfo  {journal} {Phys. Rev. E}\ }\textbf {\bibinfo {volume}
-  {97}},\ \bibinfo {pages} {042404} (\bibinfo {year} {2018})}\BibitemShut {NoStop}%
-%  \bibitem [{Sup()}]{Supplemental}%
-%  \BibitemOpen
-%  \href@noop {} {}\bibinfo {note} {See Supplemental Material at (URL will be
-%  inserted by publisher)}\BibitemShut {NoStop}%
+  {97}},\ \bibinfo {pages} {042404} (\bibinfo {year} {2018})}\BibitemShut
+  {NoStop}%
 \bibitem [{\citenamefont {Aldrovandi}(2001)}]{Aldrovandi2001}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~R.}\ \bibnamefont
@@ -722,7 +720,8 @@ We thank Robert Jack and Kabir Husain for helpful comments on an earlier version
   {Gingrich}}, \ and\ \bibinfo {author} {\bibfnamefont {P.~L.}\ \bibnamefont
   {Geissler}},\ }\href {\doibase 10.1103/PhysRevE.89.062108} {\bibfield
   {journal} {\bibinfo  {journal} {Phys. Rev. E}\ }\textbf {\bibinfo {volume}
-  {89}},\ \bibinfo {pages} {062108} (\bibinfo {year} {2014})} \BibitemShut {NoStop}%
+  {89}},\ \bibinfo {pages} {062108} (\bibinfo {year} {2014})},\ \Eprint
+  {http://arxiv.org/abs/1307.0801} {arXiv:1307.0801} \BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Crisanti}\ \emph {et~al.}(1993)\citenamefont
   {Crisanti}, \citenamefont {Paladin},\ and\ \citenamefont
   {Vulpiani}}]{Crisanti1993}%
@@ -768,6 +767,12 @@ We thank Robert Jack and Kabir Husain for helpful comments on an earlier version
   }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Nature}\ }\textbf
   {\bibinfo {volume} {430}},\ \bibinfo {pages} {81} (\bibinfo {year}
   {2004})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Derrida}(1983)}]{Derrida1983}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
+  {Derrida}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Journal of statistical physics}\ }\textbf {\bibinfo {volume} {31}},\
+  \bibinfo {pages} {433} (\bibinfo {year} {1983})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {del Junco}\ and\ \citenamefont
   {Vaikuntanathan}(2019)}]{DelJunco2019b}%
   \BibitemOpen
@@ -778,6 +783,7 @@ We thank Robert Jack and Kabir Husain for helpful comments on an earlier version
   {year} {2019}),\ \Eprint {http://arxiv.org/abs/1909.02534} {arXiv:1909.02534
   [cond-mat.stat-mech]} \BibitemShut {NoStop}%
 \end{thebibliography}%
+
 
 \begin{appendix}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  18 DEC 2019 11:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  18 DEC 2019 14:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1253,7 +1253,7 @@ Class revtex4-1 Info: multicol was not loaded (OK!) on input line 19.
 LaTeX Warning: Unused global option(s):
     [longbibliograpy].
 
-No file pre-letter.aux.
+(./pre-letter.aux)
 \openout1 = `pre-letter.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
@@ -1268,6 +1268,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
+
 (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count156
@@ -1363,146 +1364,58 @@ e
 
 \openout3 = `pre-letterNotes.bib'.
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 31.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 30.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 31.
-
-
-LaTeX Warning: Reference `fig:ttriv' on page 1 undefined on input line 32.
-
-[1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-
-Package natbib Warning: Citation `Paijmans2017' on page 2 undefined on input li
-ne 52.
-
-
-Package natbib Warning: Citation `Paijmans2017' on page 2 undefined on input li
-ne 52.
-
-[2]
-
-Package natbib Warning: Citation `Paijmans2017' on page 3 undefined on input li
-ne 54.
-
-
-LaTeX Warning: Reference `fig:rates' on page 3 undefined on input line 54.
-
-
-Package natbib Warning: Citation `Hong2019' on page 3 undefined on input line 5
-4.
-
-<rates.pdf, id=14, 271.0125pt x 86.3225pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 30.
+ [1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+<rates.pdf, id=13, 271.0125pt x 86.3225pt>
 File: rates.pdf Graphic file (type pdf)
  <use rates.pdf>
-Package pdftex.def Info: rates.pdf used on input line 57.
+Package pdftex.def Info: rates.pdf used on input line 58.
 (pdftex.def)             Requested size: 469.75502pt x 149.63087pt.
-
-
-Package natbib Warning: Citation `Paijmans2017' on page 3 undefined on input li
-ne 58.
-
-
-Package natbib Warning: Citation `Paijmans2017' on page 3 undefined on input li
-ne 58.
-
-
-Package natbib Warning: Citation `Marsland2019' on page 3 undefined on input li
-ne 64.
-
-[3]
-
-LaTeX Warning: Reference `fig:ttriv' on page 4 undefined on input line 70.
-
-
-Package natbib Warning: Citation `Barato2017' on page 4 undefined on input line
- 70.
-
-
-Package natbib Warning: Citation `Cao2015' on page 4 undefined on input line 70
-.
-
-[4 <./rates.pdf>] <ttriv.pdf, id=39, 456.70625pt x 411.5375pt>
+ [3] [4 <./rates.pdf>] <ttriv.pdf, id=39, 456.70625pt x 411.5375pt>
 File: ttriv.pdf Graphic file (type pdf)
  <use ttriv.pdf>
-Package pdftex.def Info: ttriv.pdf used on input line 73.
+Package pdftex.def Info: ttriv.pdf used on input line 74.
 (pdftex.def)             Requested size: 211.38832pt x 190.47754pt.
-
-[5]
-
-Package natbib Warning: Citation `DelJunco2019b' on page 6 undefined on input l
-ine 90.
-
-[6 <./ttriv.pdf>]
-
-Package natbib Warning: Citation `Novak2008' on page 7 undefined on input line 
-102.
-
-
-Package natbib Warning: Citation `Marsland2019' on page 7 undefined on input li
-ne 102.
-
-
-Package natbib Warning: Citation `Barato2017' on page 7 undefined on input line
- 102.
-
-[7]
-
-LaTeX Warning: Reference `LastBibItem' on page 8 undefined on input line 127.
-
-
-Underfull \hbox (badness 2865) in paragraph at lines 195--203
+ [5] [6 <./ttriv.pdf>] [7] [8]
+Underfull \hbox (badness 3679) in paragraph at lines 202--210
 []\OT1/cmr/m/n/10.95 L. Hong, D. O. Lavren-tovich, A. Cha-van, E. Ley-pun-skiy,
  E. Li, C. Matthews,
  []
 
 
-Underfull \hbox (badness 2875) in paragraph at lines 195--203
+Underfull \hbox (badness 3668) in paragraph at lines 202--210
 \OT1/cmr/m/n/10.95 A. Li-Wang, M. J. Rust,  and A. R. Din-ner, bioRxiv  (2019),
  10.1101/835280,
  []
 
-[8]
-
-Package natbib Warning: There were undefined citations.
-
-[9] (./pre-letter.aux
-
-Package natbib Warning: Citation(s) may have changed.
-(natbib)                Rerun to get citations correct.
-
-)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right .
-
-
- ) 
+[9] (./pre-letter.aux) ) 
 Here is how much of TeX's memory you used:
- 12735 strings out of 492995
- 221073 string characters out of 6132704
- 281099 words of memory out of 5000000
- 16210 multiletter control sequences out of 15000+600000
+ 12736 strings out of 492995
+ 221080 string characters out of 6132704
+ 282623 words of memory out of 5000000
+ 16209 multiletter control sequences out of 15000+600000
  9152 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,7n,53p,10386b,357s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
-/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
-sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr
-/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
-ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loc
-al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/
-texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
-exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/tex
-live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on pre-letter.pdf (9 pages, 289089 bytes).
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmbx12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmex10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmmi12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmmi8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti1
+2.pfb>
+Output written on pre-letter.pdf (9 pages, 289150 bytes).
 PDF statistics:
  124 PDF objects out of 1000 (max. 8388607)
  89 compressed objects within 1 object stream
